@@ -111,6 +111,7 @@
 										<?php endif; ?>
 
 
+
 										<div class="p-item__thumb">
 													<?php if ( ! empty( $item_zaiko ) ) : ?>
 														<?php if ( $item_zaiko || in_array( 'none', $item_zaiko ) ) : ?>
