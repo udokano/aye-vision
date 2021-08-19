@@ -1,0 +1,94 @@
+/**
+
+お客様用管理画面の不要項目削除
+
+*/
+
+/* ALL in one SEOの設定は非表示 */
+
+#aioseo-settings {
+    display: none;
+}
+
+.post-type-post #acf-group_60f7d411a9c24 {
+    display: none !important;
+}
+
+.welcart-shop_page_usces_itemedit #acf-group_60f7d411a9c24 {
+    display: block !important;
+}
+
+/* 表示オプションからも消す */
+
+.metabox-prefs label[for="aioseo-settings-hide"], .metabox-prefs label[for="acf-group_60f7d411a9c24-hide"], .metabox-prefs label[for="rudrtagsdiv-post_tag-hide"], .metabox-prefs label[for="revisionsdiv-hide"], .metabox-prefs label[for="commentsdiv-hide"], .metabox-prefs label[for="trackbacksdiv-hide"], .metabox-prefs label[for="slugdiv-hide"], .metabox-prefs label[for="postexcerpt-hide"], .metabox-prefs label[for="commentstatusdiv-hide"], .metabox-prefs label[for="authordiv-hide"] {
+    display: none !important;
+}
+
+.post-type-news #aioseo-details, .post-type-news .column-aioseo-details {
+    display: none;
+}
+
+/* 投稿SEO消す */
+
+.post-type-post #aioseo-details, .post-type-post .column-aioseo-details {
+    display: none;
+}
+
+/* タグボックスを消す */
+
+.post-type-post #rudrtagsdiv-post_tag {
+    display: none !important;
+}
+
+.post-type-faq #preview-action {
+    display: none;
+}
+
+.post-type-layout #preview-action {
+    display: none;
+}
+
+/* タイトル消す */
+
+.post-type-faq #title, .post-type-layout #title {
+    display: none;
+}
+
+/* 更新後の投稿を表示を消す */
+.post-type-faq #message a, .post-type-layout #message a {
+    display: none;
+}
+
+.post-type-faq .page-title-action, .post-type-layout .page-title-action {
+    display: none;
+}
+
+.post-type-faq #edit-slug-box {
+    display: none;
+}
+
+.post-type-layout #edit-slug-box {
+    display: none;
+}
+
+/* カスタムフィールド編集ボタンを消す */
+.post-type-faq .acf-hndle-cog {
+    display: none !important;
+}
+
+.post-type-faq .misc-pub-section, .post-type-layout .misc-pub-section {
+    display: none;
+}
+
+.post-type-faq #rewrite-republish-action, .post-type-faq #delete-action, .post-type-layout #rewrite-republish-action, .post-type-layout #delete-action {
+    display: none;
+}
+
+/* .booking-package_page_booking-package_setting_page #contentPanel {
+    display: none !important;
+}
+
+.booking-package_page_booking-package_setting_page #holidayPanel {
+    display: block !important;
+}
+ */

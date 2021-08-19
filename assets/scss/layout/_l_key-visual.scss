@@ -1,0 +1,93 @@
+.l-key-visual {
+    position: relative;
+    margin-bottom: 36px;
+
+    @include sp {
+        margin-bottom: 6.8%;
+    }
+
+
+    &__slide {}
+
+    &__bnr {}
+
+    &__link {}
+}
+
+.l-key-visual-arw {
+    @include trans_y;
+
+    width: 75px;
+    height: 75px;
+    background: no-repeat 50% 50%;
+    background-size: 100% auto;
+    z-index: 500;
+    cursor: pointer;
+
+    @include sp {
+        width: 9vw;
+        height: 9vw;
+        top: 45%;
+    }
+
+
+    &--prev {
+        background-image: url(../images/common/c_icon_slide_prev.svg);
+        left: 8.06%;
+
+        @include sp {
+            left: 1.13%;
+        }
+    }
+
+    &--next {
+        background-image: url(../images/common/c_icon_slide_next.svg);
+        right: 8.06%;
+
+        @include sp {
+            right: 1.13%;
+        }
+    }
+}
+
+.slick-slider {
+    opacity: 0;
+
+    &.slick-initialized {
+        opacity: 1;
+    }
+}
+
+.slick-dots {
+    text-align: center;
+
+    @include sp {
+        margin-top: 2.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    li {
+        font-size: 0;
+        display: inline-block;
+        vertical-align: middle;
+        height: 1px;
+        width: 40px;
+        background-color: #bfbfbf;
+        margin: 0 7px;
+        cursor: pointer;
+
+        @include sp {
+            flex: 0 0 7%;
+            margin: 0 0.9%;
+        }
+
+
+        &.slick-active {
+            background-color: $key_light_blue;
+            height: 3px;
+        }
+    }
+}

@@ -1,0 +1,267 @@
+.reserve-type {
+    display: flex;
+    justify-content: center;
+    padding: 4.888rem 0 2.5555rem;
+
+    @include sp {
+        flex-flow: column;
+    }
+
+
+    &__item {
+        background-color: #fff;
+        border: 2px solid $key_blue;
+        color: $key_blue;
+        font-weight: 500;
+        width: 48%;
+        max-width: 470px;
+        line-height: 1.42;
+        margin: 0 .42rem;
+        text-align: center;
+        font-size: rem(21.2);
+        border-radius: rem(8);
+
+        &.is-select-type {
+            background-color: $key_blue;
+            color: #fff;
+        }
+
+        @include sp {
+            width: 100%;
+            max-width: 680px;
+
+            &:last-of-type {
+                margin-top: 1.1rem;
+            }
+        }
+    }
+
+    &__link {
+        padding: rem(22) rem(8);
+        display: block;
+    }
+}
+
+.reserve-area {
+    padding: 1.888% 0 0;
+
+    &__guide {
+        text-align: center;
+        font-size: 1.88rem;
+        line-height: 1.654;
+    }
+}
+
+.reserve-list {
+    &__cal {
+        //visibility: hidden;
+        //display: none;
+   
+    }
+}
+
+.service-out-wrap {
+    display: none;
+}
+
+.service-out {
+    padding: .64rem .64rem;
+    padding-right: 1.855rem;
+    border-radius: rem(5);
+    background-color: #fafafa;
+    font-size: rem(18);
+    border: 1px solid #cecece;
+    position: relative;
+
+    &__icon {
+        @include trans_y;
+
+        right: .88%;
+        width: rem(30);
+        height: rem(15);
+        fill: #333;
+    }
+}
+
+.service-list {
+    display: none;
+    border-top: none;
+    border: 1px solid #cecece;
+    display: flex !important;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    &.is-list-show {
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+        padding: 1.422rem 1.32rem !important;
+    }
+
+    @include pc-only {
+        &::after {
+            content: "";
+            display: block;
+            width: 32.554%;
+        }
+    }
+
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.85rem;
+        width: 32.554%;
+        padding: 1.35rem;
+        cursor: pointer;
+        position: relative;
+
+        @include sp {
+            width: 48.554%;
+            flex-flow: column;
+            align-items: center;
+        }
+
+
+        &.is-item-checked {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                display: block;
+                border: rem(6) solid $key_light_blue;
+            }
+        }
+    }
+
+    &__thumb {
+        width: 25%;
+
+        @include sp {
+            width: 80%;
+            margin-bottom: 5%;
+        }
+    }
+
+    &__name {
+        margin-left: 1.2rem;
+        font-size: rem(15);
+        width: 75%;
+
+        @include sp {
+            width: 100%;
+            margin: 0;
+            font-size: rem(17);
+            text-align: center;
+        }
+    }
+}
+
+.reserve-form {
+    #booking-package_inputFormPanel input[type=text] {
+        font-size: rem(18);
+        padding: 0.64rem;
+        border-width: rem(2);
+    }
+
+    #booking-package_inputFormPanel select {
+        padding: .64rem .64rem;
+        padding-right: .255rem;
+        border-radius: rem(5);
+        background-color: #fafafa;
+        appearance: menulist;
+    }
+
+    #booking-package_inputFormPanel {
+        .name {
+            font-size: rem(20);
+            font-weight: 500;
+            padding-bottom: rem(12);
+        }
+
+        #booking_package_input_servicetext {
+            visibility: hidden;
+            width: 0 !important;
+            height: 0 !important;
+            padding: 0 !important;
+        }
+    }
+
+    #booking-package_calendarPage .dayPanel.today {
+        color: $key_blue;
+        font-weight: 600;
+    }
+
+    #booking-package_schedulePage #returnToCalendarButton, #booking-package_schedulePage #returnToDayListButton {
+        font-weight: 500;
+        background-color: #595959;
+        color: #fff;
+        padding: .95rem .75rem;
+        display: block;
+        width: 28%;
+        margin: 0 auto;
+        font-size: rem(20);
+        font-weight: 500;
+
+        @include sp {
+            width: 78%;
+        }
+    }
+
+    #booking-package_schedulePage .returnDayButton, #booking-package_schedulePage .nextDayButtton {
+        padding: .28rem .75rem;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    #booking-package_schedulePage .returnDayButton {
+        background-color: #595959;
+    }
+
+    #booking-package_schedulePage .nextDayButtton {
+        background-color: #595959;
+    }
+
+    #booking-package_inputFormPanel .bottomBarPanel {
+        button {
+            padding: .88rem 0;
+            color: #fff;
+            font-size: rem(20);
+        }
+
+        .bookingButton {
+            background-color: $key_blue;
+        }
+
+        #returnToSchedules {
+            background-color: #666666;
+        }
+    }
+
+    #booking-package_pay_locally {}
+
+    #booking-package_calendarPage {
+        .dayPanel {
+            font-size: rem(20);
+
+            &.sun {
+                //background-color: #fed2d2;
+           
+            }
+        }
+
+        .symbolPanel {
+            @include sp {
+                line-height: 1.65;
+            }
+        }
+    }
+}

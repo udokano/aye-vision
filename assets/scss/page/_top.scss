@@ -1,0 +1,605 @@
+.sec-guide {
+    @include sp {
+        background-color: $bg_light_blue;
+    }
+
+
+    &__inner {
+        background-color: $bg_light_blue;
+
+        @include sp {
+            background-color: transparent;
+        }
+    }
+
+    &__col {}
+
+    &__eng {
+        color: $key_light_blue;
+    }
+
+    &__btn {
+        background-color: $key_light_blue;
+    }
+}
+
+.guide-list {
+    @include flex-sb;
+    @include sp {
+        flex-flow: column;
+    }
+
+
+    &__item {
+        max-width: 300px;
+        width: 22.74%;
+
+        @include sp {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 10%;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link {
+        @include sp {
+            display: flex;
+            position: relative;
+        }
+    }
+
+    &__thumb {
+        overflow: hidden;
+
+        @include sp {
+            width: 54%;
+        }
+    }
+
+    &__ttl {
+        position: relative;
+        padding-top: 22px;
+        padding-left: 58px;
+        line-height: 1.364;
+        font-size: rem(22);
+        font-weight: 500;
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: 110px;
+            background-color: $key_light_blue;
+            position: absolute;
+            top: -24px;
+            left: 30px;
+        }
+
+        @include sp {
+            width: 46%;
+            padding-top: 9%;
+            padding-left: 4.2%;
+
+            &::after {
+                height: 1px;
+                width: 47%;
+                top: 12%;
+                left: -9%;
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        fill: $key_blue;
+        stroke-width: 2px;
+        stroke: $key_blue;
+        width: 5vw;
+        height: 5vw;
+
+        @include sp {
+            right: .32%;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.sec-news {
+    @include sp {
+        background-color: $bg_light_green;
+    }
+
+
+    &__inner {
+        background-color: $bg_light_green;
+
+        @include sp {
+            background-color: transparent;
+        }
+    }
+
+    &__col {}
+
+    &__eng {
+        color: $key_light_green;
+    }
+
+    &__btn {
+        background-color: $key_light_green;
+    }
+}
+
+.sec-items {
+    @include sp {
+        background-color: $bg_green;
+    }
+
+
+    &__inner {
+        background-color: $bg_green;
+
+        @include sp {
+            background-color: transparent;
+        }
+    }
+
+    &__col {}
+
+    &__eng {
+        color: $key_green;
+    }
+
+    &__btn {
+        background-color: $key_green;
+    }
+}
+
+.item-search {
+    @include sp {
+        width: 82%;
+    }
+
+
+    &--search {
+        margin-bottom: 5.555%;
+
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &__inner {
+        background-color: $bg_green;
+        padding: 2.08% 2.222%;
+
+        @include sp {
+            padding: 4.555% 3.2%;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        font-weight: 500;
+        font-size: rem(22);
+        color: $key_green;
+        margin-bottom: 2.8555%;
+        text-align: center;
+
+        @include sp {
+            margin-bottom: 4.77%;
+        }
+    }
+
+    &__form {
+        @include flex-sb;
+
+        //align-items: center;
+   
+    }
+
+    &__left {
+        position: relative;
+        max-width: 1085px;
+        width: 83.08%;
+
+        @include sp {
+            width: 76%;
+        }
+    }
+
+    &__submit {
+        max-width: 210px;
+        width: 16.08%;
+        background-color: $key_pink;
+        color: #ffffff;
+        text-align: center;
+        border-radius: rem(25);
+        letter-spacing: .3em;
+
+        @include sp {
+            border-radius: 50%;
+            width: 20%;
+        }
+    }
+
+    &__icon {
+        fill: $key_green;
+        width: rem(28);
+        height: rem(28);
+
+        @include trans_y;
+
+        left: 27px;
+
+        @include sp {
+            left: 6%;
+            width: rem(30);
+            height: rem(30);
+        }
+    }
+
+    &__input {
+        background-color: #fff;
+        width: 100%;
+        border: 1px solid $key_green;
+        padding: 11px 22px;
+        padding-left: rem(69);
+        border-radius: rem(25);
+        font-size: rem(18);
+
+        @include sp {
+            padding: 7.98% 8.2% 7.7%;
+            padding-left: 3.15rem;
+            border-radius: rem(40);
+            font-size: 1rem;
+        }
+
+
+        &::placeholder {
+            color: #cacaca;
+        }
+    }
+}
+
+.top-about {
+    padding: 55px 0 82px;
+    background: url(../images/top-page/bg_about.jpg) no-repeat 100% 100%;
+    background-size: auto 95%;
+
+    @include sp {
+        background: url(../images/top-page/bg_about_sp.jpg) no-repeat 100% 84%;
+        background-size: 72% auto;
+        padding: 12% 0 11.2%;
+    }
+
+
+    &__ttl {
+        margin-bottom: 44px;
+    }
+
+    &__box {
+        max-width: 741px;
+    }
+
+    &__desc {
+        font-size: rem(15);
+        color: #313131;
+        line-height: 2.667;
+
+        @include sp {
+            line-height: 2.18;
+            font-size: .98rem;
+        }
+    }
+}
+
+.top-access {
+    padding: 55px 0 76px;
+    background-color: $bg_light_blue;
+
+    @include sp {
+        padding: 8% 0 9.8%;
+    }
+
+
+    &__ttl {
+        margin-bottom: 51px;
+
+        @include sp {
+            margin-bottom: 8.7%;
+        }
+    }
+
+    &__col {
+        @include flex-sb;
+        @include sp {
+            flex-flow: column;
+        }
+    }
+
+    &__map {
+        max-width: 830px;
+        width: 53.9%;
+
+        @include sp {
+            width: 100%;
+            margin-bottom: 9%;
+        }
+    }
+
+    &__contents {
+        max-width: 658px;
+        width: 42.73%;
+
+        @include sp {
+            width: 100%;
+        }
+    }
+}
+
+.map-area {
+    &__illust {
+        overflow: hidden;
+        margin-bottom: 16px;
+
+        @include sp {
+            margin-bottom: 8%;
+        }
+    }
+
+    &__list {
+        @include flex-sb;
+        @include sp {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        font-size: rem(15);
+        color: $key_pink;
+
+        @include sp {
+            width: 75%;
+        }
+    }
+
+    &__gmap {
+        color: $key_blue;
+        text-decoration: underline;
+
+        @include sp {
+            color: #ffffff;
+            background-color: $key_pink;
+            width: 100%;
+            display: block;
+            padding: rem(29) rem(5);
+            font-size: 1.31rem;
+            border-radius: rem(40);
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+}
+
+.shop-info {
+    &__address {
+        font-size: rem(22);
+        margin-bottom: 8px;
+
+        @include sp {
+            margin-bottom: 4%;
+            font-size: rem(26);
+        }
+    }
+
+    &__tel {
+        color: $key_blue;
+        display: flex;
+        align-items: center;
+        display: block;
+        margin-bottom: 15px;
+        line-height: 1;
+
+        @include sp {
+            margin-bottom: 6%;
+        }
+    }
+
+    &__sub {
+        font-size: rem(20);
+        position: relative;
+        padding-right: rem(36);
+        vertical-align: middle;
+        line-height: 1;
+
+        @include sp {
+            font-size: rem(24);
+        }
+
+
+        &::after {
+            content: "";
+            background-color: $key_blue;
+            width: 1px;
+            height: rem(30);
+            position: absolute;
+            right: rem(14);
+            bottom: rem(-3);
+            transform: rotate(33deg);
+
+            @include sp {
+                height: rem(36);
+            }
+        }
+    }
+
+    &__number {
+        font-size: rem(34);
+        vertical-align: middle;
+        line-height: 1;
+
+        @include sp {
+            font-size: rem(42);
+        }
+    }
+
+    &__table {
+        margin-bottom: 18px;
+    }
+
+    &__note {
+        margin-bottom: 15px;
+    }
+
+    &__main {
+        font-size: rem(15);
+        line-height: 1.375;
+    }
+
+    &__strong {
+        font-size: rem(20);
+        color: $key_pink;
+        font-weight: 500;
+
+        @include sp {
+            display: block;
+            margin-top: 2%;
+            font-size: rem(25);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+    }
+
+    &__card {
+        max-width: 267px;
+        margin-right: 13px;
+
+        @include sp {
+            width: 52%;
+        }
+    }
+
+    &__guide {
+        font-size: rem(15);
+        line-height: 1.467;
+    }
+
+    &__sp-heading {
+        position: relative;
+        padding-left: 4.2%;
+        color: #61d0ff;
+        margin-bottom: 1.2%;
+        font-size: 1.13rem;
+    }
+
+    &__sp-icon {
+        fill: #61d0ff;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+
+        @include trans_y;
+
+        left: 0;
+        width: rem(16);
+        height: rem(25);
+    }
+}
+
+.top-blog {
+    padding: 58px 0 60px;
+
+    @include sp {
+        padding: 11% 0;
+    }
+
+
+    &__ttl {}
+
+    &__intro {
+        text-align: center;
+        margin: 23px 0 30px;
+
+        @include sp {
+            margin: 5.5% 0 7.3%;
+        }
+    }
+
+    &__article {
+        margin-bottom: 32px;
+
+        @include sp {
+            margin-bottom: 12.78%;
+        }
+    }
+
+    &__btn {
+        background-color: $key_blue;
+    }
+}
+
+.top-faq {
+    background-color: $bg_light_green;
+    padding: 63px 0 52px;
+
+    &__ttl {
+        margin-bottom: 21px;
+    }
+
+    &__list {
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+        background-color: $key_blue;
+    }
+}
+
+.campaign {
+    padding-top: 40px;
+
+    @include sp {
+        padding: 9.5% 0;
+    }
+
+
+    &__bnr {
+        @include flex-sb;
+
+        flex-wrap: wrap;
+
+        @include sp {
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        //max-width: 740px;
+        //width: 48.05%;
+
+        flex: 0 0 48.05%;
+        margin-bottom: 20px;
+
+        @include sp {
+            width: 100%;
+            max-width: 650px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 7.2%;
+            }
+        }
+    }
+
+    &__link {
+        overflow: hidden;
+        display: block;
+    }
+}

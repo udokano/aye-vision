@@ -1,0 +1,69 @@
+.l-wrapper {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+
+.l-main {
+    overflow: hidden;
+}
+
+.l-top {
+    color: $key_pink;
+}
+
+.l-inner {
+    max-width: 1540px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-inner-small {
+    max-width: 900px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-inner-wide {
+    max-width: 1660px;
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include sp {
+        width: 90%;
+    }
+}
+
+.l-col02 {
+    max-width: 1150px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include flex-sb;
+}
+
+.l-single-contents {
+    max-width: 750px;
+    width: 65.22%;
+
+    @include sp {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.l-sidebar {
+    max-width: 330px;
+    width: 28.7%;
+
+    @include sp {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

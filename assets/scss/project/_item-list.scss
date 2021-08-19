@@ -1,0 +1,365 @@
+.p-item-kind {
+    display: flex;
+    border-bottom: 1px solid $key_green;
+    margin-bottom: 35px;
+
+    @include sp {
+        margin-top: 8%;
+    }
+
+
+    &__item {
+        flex: 0 1 29.04%;
+        border: 1px solid $key_green;
+        border-bottom: none;
+        color: $key_green;
+        text-align: center;
+        border-radius: 27px 27px 0 0;
+        line-height: 1;
+        padding: 11px 0;
+        font-size: rem(27);
+        background-color: #c1f0b9;
+        cursor: pointer;
+        position: relative;
+
+        @include sp {
+            font-size: 1.26rem;
+        }
+
+
+        &:not(:first-of-type) {
+            margin-left: -1px;
+        }
+
+        &:hover {
+            background-color: #b1e6a7;
+        }
+
+        &.is-active {
+            background-color: transparent;
+            border-bottom: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: -2px;
+                background-color: #e0f8dc;
+            }
+        }
+
+        @include sp {
+            flex: 0 1 34.3333333%;
+            border-radius: 14px 14px 0 0;
+        }
+    }
+}
+
+.p-top-items {
+    @include flex-sb;
+    @include sp {
+        flex-wrap: wrap;
+    }
+
+
+    &__item {
+        //max-width: 180px;
+        width: 13.78%;
+        cursor: pointer;
+        transition: step-start .2s;
+
+        @include sp {
+            width: 45%;
+            max-width: 450px;
+            margin: 0 2.5% 12%;
+
+            &:nth-last-of-type(2), &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__thumb {
+        margin-bottom: 16px;
+        height: 10vw;
+        background-color: #fff;
+        border-radius: 30px;
+        overflow: hidden;
+
+        //max-height: 153px;
+
+        @include sp {
+            height: 36vw;
+            max-height: none;
+            margin-bottom: 9.2%;
+            border-radius: 15px;
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 100%;
+
+            @include sp {}
+        }
+    }
+
+    &__contents {
+        font-size: rem(15);
+        text-align: center;
+
+        @include sp {
+            font-size: 1.28rem;
+        }
+    }
+
+    &__ttl {
+        margin-bottom: 8px;
+        line-height: 1.333;
+        font-size: rem(15);
+
+        @include sp {
+            font-size: 1.18rem;
+            margin-bottom: .88%;
+        }
+    }
+
+    &__price {
+        color: $key_pink;
+
+        .tax {
+            font-size: rem(15);
+        }
+    }
+
+    &__no-item {
+        text-align: center;
+        font-weight: 500;
+        font-size: rem(26);
+    }
+}
+
+.p-item {
+    border-radius: 40px;
+    border: 1px solid #c2bfbf;
+    padding: 2.08% 2.12% 2.08%;
+    margin-bottom: 3.38%;
+    position: relative;
+
+    @include sp {
+        padding: 8.08% 5.12%;
+        border-radius: 20px;
+        margin-bottom: 7.888%;
+    }
+
+
+    &__brand {
+        transform: scale(0.5);
+        transform-origin: left top;
+        height: 70px;
+
+        @include sp {
+            //margin-bottom: 7vw;
+        }
+
+
+        img {
+            width: auto;
+
+            //transform: scale(0.5);
+            transform-origin: left 0%;
+        }
+    }
+
+    &__thumb {
+        //margin-bottom: 12px;
+        height: 178px;
+        position: relative;
+        margin-bottom: 22px;
+
+        @include sp {
+            height: 41vw;
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: 50% 0%;
+
+            &.no {
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+        }
+    }
+
+    &__balloon {
+        position: absolute;
+        right: -3%;
+        top: -8%;
+        width: rem(100) !important;
+        height: auto !important;
+        display: block;
+        object-fit: contain !important;
+        object-position: 50% 50% !important;
+        animation-name: ballon;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: .85s;
+
+        @keyframes ballon {
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            100% {
+                transform: translate(0, -7px);
+            }
+        }
+
+        @include sp {
+            top: -18%;
+            right: -1%;
+        }
+    }
+
+    &__fec {
+        display: flex;
+    }
+
+    &__f-item {
+        margin-right: 8px;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 62px;
+    }
+
+    &__name {
+        font-size: rem(25);
+        font-weight: 500;
+        margin-top: 24px;
+        margin-bottom: 5px;
+
+        @include sp {
+            font-size: 1.72rem;
+        }
+    }
+
+    &__t-sub {
+        //color: #c2bfbf;
+        letter-spacing: .0025em;
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+
+    &__desc {
+        font-size: 1rem;
+        line-height: 1.625;
+
+        @include sp {
+            font-size: 1.22rem;
+        }
+    }
+
+    &__col {
+        margin-top: 21px;
+        display: flex;
+        justify-content: flex-end;
+        color: $key_pink;
+        margin-bottom: 8%;
+        padding-bottom: 20%;
+
+        @include sp {
+            justify-content: center;
+            margin: 7% 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__box {
+        font-size: rem(19);
+        display: inline-block;
+        padding-right: rem(30);
+        position: relative;
+
+        &::after {
+            content: "";
+
+            @include trans_y;
+
+            right: rem(15);
+            transform: translateY(-50%) rotate(40deg);
+            width: 2px;
+            height: rem(40);
+            background-color: $key_pink;
+        }
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: rem(40);
+        line-height: 1;
+        display: inline-block;
+
+        @include sp {
+            font-size: 3.8rem;
+        }
+
+
+        em {}
+    }
+
+    &__tax {
+        font-size: rem(24);
+        font-style: normal;
+    }
+
+    &__btn-col {
+        @include flex-sb;
+        @include trans_x;
+
+        bottom: 4%;
+        width: 90%;
+
+        @include sp {
+            transform: none;
+            position: static;
+            width: 100%;
+        }
+    }
+
+    &__btn-list {
+        width: 47%;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 100%;
+
+        @include sp {
+            font-size: 1.12rem;
+        }
+
+
+        &--ec {
+            background-color: #a5a5a5;
+            pointer-events: none;
+        }
+
+        &--reserve {
+            background-color: $key_blue;
+        }
+    }
+}

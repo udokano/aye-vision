@@ -1,0 +1,16 @@
+.l-pages-head {
+    color: #fff;
+    background-color: #211f23;
+    background-image: linear-gradient(90deg, rgba(177, 70, 113, 1) 0%, rgba(183, 104, 97, 1) 100%);
+    padding: rem(74) rem(88);
+
+    @include sp {
+        padding: rem(74) 5%;
+        font-size: 1.2rem;
+    }
+
+
+    &__ttl {
+        @include sp {}
+    }
+}

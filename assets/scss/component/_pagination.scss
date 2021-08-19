@@ -1,0 +1,35 @@
+.c-pagination {
+    text-align: center;
+    border-top: 1px solid $key_light_blue;
+    border-bottom: 1px solid $key_light_blue;
+    font-size: 0;
+
+    .page-numbers {
+        li {
+            display: inline-block;
+            font-size: rem(20);
+            color: #cfe7f1;
+            font-weight: 500;
+
+            @include sp {
+                font-size: 1.32rem;
+            }
+        }
+
+        .current {
+            color: $key_light_blue;
+        }
+
+        .next, .prev {
+            color: $key_light_blue;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        a, span {
+            padding: rem(22) rem(30);
+            display: block;
+            line-height: 1;
+        }
+    }
+}

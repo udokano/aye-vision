@@ -1,0 +1,48 @@
+.web-coupon {
+    padding: 3.5555% 0;
+
+    &__inner {
+        max-width: 800px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__ttl {
+        text-align: center;
+        font-weight: 600;
+        font-size: rem(32);
+        margin-bottom: 2.555rem;
+        background-color: $key_light_blue;
+        color: #fff;
+        padding: rem(8);
+    }
+
+    &__thumb {
+        margin-bottom: 2.555rem;
+        border: 1px solid #d7d7d7;
+    }
+
+    &__desc {
+        text-align: center;
+        font-size: rem(20);
+        font-weight: 500;
+        margin-bottom: 2.0555rem;
+    }
+
+    &__n-list {
+        text-align: center;
+        text-decoration: underline;
+        font-size: rem(18);
+        margin-bottom: 2.65rem;
+        color: #4d4d4d;
+    }
+
+    &__btn {
+        background-color: $key_pink;
+        font-size: rem(22);
+
+        @include sp {
+            display: none;
+        }
+    }
+}

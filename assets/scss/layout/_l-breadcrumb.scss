@@ -1,0 +1,48 @@
+.l-breadcrumb {
+    &__list {
+        display: flex;
+        align-items: center;
+        padding: 19px 0;
+
+        @include sp {}
+    }
+
+    &__item {
+        position: relative;
+        padding-right: .75rem;
+        margin-right: .25rem;
+        font-size: rem(13);
+        color: #8abace;
+        line-height: 1;
+        font-weight: 300;
+
+        @include sp {
+            &:last-of-type {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                flex: 1 1 25%;
+            }
+        }
+
+
+        span, a {
+            @include sp {}
+        }
+
+        &:not(:first-of-type) {
+            // color: #3796b5;
+       
+        }
+
+        &:not(:last-of-type) {
+            &::after {
+                content: ">";
+                right: 0;
+
+                @include trans_y;
+            }
+        }
+    }
+}

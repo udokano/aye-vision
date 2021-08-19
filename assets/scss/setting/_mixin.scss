@@ -1,0 +1,87 @@
+/* REM PX変換 */
+
+$baseFontsize: 16;
+
+html {
+    //font-size: 100%;
+    font-size: $baseFontsize + px;
+}
+
+@function rem($pixels) {
+    @return $pixels / $baseFontsize * 1rem;
+}
+
+/* ブレイクポイント指定 */
+
+$pc: 1600px; // PC
+$tab: 1024px; // タブレット
+$sp: 768px; // スマホ
+
+@mixin pc {
+    @media (max-width: $pc) {
+        @content;
+    }
+}
+
+@mixin pc-only {
+    @media (min-width: $sp) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: $sp) {
+        @content;
+    }
+}
+
+@mixin inner {
+    width: 92%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include sp {
+        width: 90%;
+    }
+}
+
+@mixin trans_x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin trans_y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin trans_xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flex-sb {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg-cover {
+    background: no-repeat 50% 50% /cover;
+}

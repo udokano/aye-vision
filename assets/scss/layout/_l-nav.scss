@@ -1,0 +1,85 @@
+.l-sp-nav {
+    padding-bottom: 4.25rem;
+
+    &__list {
+        @include flex-sb;
+
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 48%;
+        position: relative;
+        border-image-slice: 1;
+        font-size: 1.08rem;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        padding: 1.88rem 1.4rem;
+        padding-right: 1.66rem;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+        }
+
+        &::after {
+            @include trans_y;
+
+            width: 1.88rem;
+            height: 1.086rem;
+            background: no-repeat 50% 50%;
+            background-size: 100% auto;
+            right: rem(15);
+        }
+    }
+
+    &__item {
+        &:nth-of-type(odd) {
+            border-top: 1px solid #b56eb6;
+            border-bottom: 1px solid #b56eb6;
+            border-image: linear-gradient(90deg, rgba(146, 114, 223, 1) 0%, rgb(160, 55, 138) 100%) 1 / 0 0 1px;
+
+            .l-sp-nav__link {
+                background-image: -webkit-linear-gradient(90deg, rgba(146, 114, 223, 1) 0%, rgba(189, 108, 172, 1) 100%);
+
+                &::after {
+                    background-image: url(../images/common/c_arw_parple.png);
+                }
+            }
+        }
+
+        &:nth-of-type(even) {
+            border-top: 1px solid #e08099;
+            border-bottom: 1px solid #e08099;
+            border-image: linear-gradient(90deg, rgba(215, 138, 173, 1) 0%, rgba(241, 112, 120, 1) 100%) 1 / 0 0 1px;
+
+            .l-sp-nav__link {
+                background-image: -webkit-linear-gradient(90deg, rgba(215, 138, 173, 1) 0%, rgba(241, 112, 120, 1) 100%);
+
+                &::after {
+                    background-image: url(../images/common/c_arw_pink.png);
+                }
+            }
+        }
+
+        &:nth-of-type(1) {
+            border-image: linear-gradient(90deg, rgba(146, 114, 223, 1) 0%, rgb(160, 55, 138) 100%) 1 / 1px 0 1px;
+        }
+
+        &:nth-of-type(2) {
+            border-image: linear-gradient(90deg, rgba(215, 138, 173, 1) 0%, rgba(241, 112, 120, 1) 100%) 1 / 1px 0 1px;
+        }
+    }
+
+    @media all and (-ms-high-contrast: none) {
+        &__item {
+            color: #b56eb6;
+        }
+    }
+}

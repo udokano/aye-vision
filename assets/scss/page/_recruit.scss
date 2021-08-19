@@ -1,0 +1,332 @@
+.offer {
+    padding: 3.31% 0 5.52%;
+
+    &__ttl {}
+
+    &__intro {
+        margin: 2.92% 0;
+        text-align: center;
+        font-size: rem(16);
+        line-height: 1.788888;
+    }
+
+    &__anchor {
+        display: block;
+        max-width: 617px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid $key_blue;
+        border-radius: 30px;
+        font-size: rem(21);
+        text-align: center;
+        padding: rem(58) rem(70);
+        font-weight: 500;
+        transition: .32s ease-out;
+
+        @include sp {
+            border-radius: 15px;
+            max-width: 650px;
+            width: 78%;
+        }
+
+
+        &::after {
+            content: "";
+
+            @include trans_y;
+
+            width: rem(49);
+            height: rem(16);
+            background: url(../images/recruit/icon_anchor_arw.png) no-repeat 50% 50%;
+            background-size: auto 100%;
+            right: rem(29);
+            transition: .32s ease-out;
+        }
+
+        &:hover {
+            background-color: $key_blue;
+            color: #fff;
+
+            &::after {
+                background-image: url(../images/recruit/icon_anchor_arw--over.png);
+            }
+        }
+    }
+}
+
+.job-flow {
+    padding: 4.48% 0;
+    background-color: $bg_light_blue;
+
+    @include sp {
+        padding: 8.48% 0;
+    }
+
+
+    &__ttl {
+        margin-bottom: 3.18%;
+
+        @include sp {
+            margin-bottom: 6.2%;
+        }
+    }
+}
+
+.job-step {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.92%;
+
+    @include sp {
+        margin-bottom: 8.45%;
+    }
+
+
+    @include sp {
+        flex-wrap: wrap;
+    }
+
+
+    &__item {
+        max-width: 261px;
+        width: 16.95%;
+        margin: 0 1.69%;
+        position: relative;
+
+        @include sp {
+            width: 100%;
+            max-width: 540px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            margin-bottom: 8.888%;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 4.2% 3.99%;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+
+        &:not(:last-of-type) {
+            &::after {
+                content: "";
+
+                @include trans_y;
+
+                top: 38%;
+                right: -33px;
+                width: 14px;
+                height: 24px;
+                background: url(../images/recruit/bg_job-flow-next-arw.png) no-repeat 50% 50%;
+                background-size: 100% auto;
+
+                @include sp {
+                    transform: none;
+
+                    @include trans_x;
+
+                    transform: rotate(90deg) translateX(-50%);
+                    top: auto;
+                    right: auto;
+                    bottom: -26%;
+                }
+            }
+        }
+    }
+
+    &__top {
+        background-color: #fff;
+        padding: 10.73% 11.49%;
+        margin-bottom: 4.98%;
+
+        @include sp {
+            width: 40%;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-weight: 300;
+        font-size: rem(17);
+        line-height: 1.588;
+
+        @include sp {
+            width: 60%;
+            text-align: left;
+            font-weight: 500;
+            padding-left: 3.22%;
+            font-size: 1.32rem;
+        }
+    }
+}
+
+.job-btm {
+    text-align: center;
+
+    &__text {
+        display: inline-block;
+        color: $key_blue;
+        font-size: rem(18);
+        line-height: 1.7552;
+        padding: 0 3.57%;
+        background: url(../images/recruit/bg_job-flow-bottom.png) no-repeat 50% 50%;
+        background-size: 98% auto;
+
+        @include sp {
+            padding: 0 2.5%;
+            font-size: 1.08rem;
+            display: block;
+        }
+    }
+}
+
+.job-entry {
+    margin-top: 5.97%;
+
+    &__inner {
+        background-color: $bg_light_green;
+        padding: 4.42% 3.25% 3.02%;
+
+        @include sp {
+            padding: 7.42% 5.25%;
+        }
+    }
+
+    &__col02 {
+        display: flex;
+    }
+
+    &__ttl {
+        width: 10%;
+
+        @include sp {
+            width: 18%;
+        }
+    }
+
+    &__eng {
+        color: $key_light_green;
+    }
+
+    &__content {
+        width: 90%;
+        background-color: #fff;
+        padding: 2.6%;
+
+        @include sp {
+            padding: 4.1%;
+        }
+
+
+        @include sp {
+            width: 82%;
+        }
+    }
+
+    &__btn {
+        background-color: $key_light_green;
+        margin-top: 44px;
+    }
+}
+
+.job-points {
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid $bg_light_green;
+
+    &--al-top {
+        align-items: flex-start;
+    }
+
+    &:not(:last-of-type) {}
+
+    &__heading {
+        width: 18%;
+        font-size: rem(20);
+        letter-spacing: 0.1em;
+        color: $key_light_green;
+
+        @include sp {
+            width: 28%;
+        }
+    }
+
+    &__data {
+        width: 82%;
+        font-size: rem(18);
+        line-height: 1.8777;
+
+        @include sp {
+            width: 70%;
+            padding-left: 3%;
+        }
+    }
+
+    &__time {
+        width: 58%;
+
+        @include sp {
+            width: 100%;
+        }
+
+
+        &:first-of-type {
+            border-top: 1px dashed #e2e2e2;
+            margin-top: 15px;
+            padding-top: 15px;
+
+            @include sp {
+                margin-bottom: 3.888%;
+            }
+        }
+    }
+
+    &__week {
+        display: inline-block;
+        width: 20%;
+        background: url(../images/recruit/bg_jog-entry-yen.png) repeat-x 100% 50%;
+        background-size: 8px auto;
+
+        @include sp {
+            display: block;
+            background: none;
+            position: relative;
+            width: 100%;
+            padding-left: 1.2rem;
+
+            &::after {
+                content: "";
+
+                @include trans_y;
+
+                width: rem(12);
+                height: rem(12);
+                background-color: #e9e9e9;
+                border-radius: 50%;
+                left: 0;
+            }
+        }
+    }
+
+    &__week-in {
+        background-color: #fff;
+        display: inline-block;
+        padding-right: 1.2%;
+    }
+
+    &__text {
+        @include sp {
+            display: block;
+        }
+    }
+
+    &__note {
+        font-size: rem(16);
+    }
+}

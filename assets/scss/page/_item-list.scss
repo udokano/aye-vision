@@ -1,0 +1,138 @@
+.item-list {
+    padding: 1.22% 0 4.955%;
+
+    @include sp {
+        padding: 8.55% 0;
+    }
+
+
+    &__ttl {
+        margin-bottom: 2.55%;
+    }
+
+    &__intro {
+        font-size: rem(15);
+        text-align: center;
+    }
+}
+
+.item-anchor {
+    display: flex;
+    position: relative;
+    margin-bottom: 77px;
+
+    @include sp {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 5.2%;
+    }
+
+
+    &__item {
+        max-width: 313px;
+        width: 20.32%;
+        background-color: $bg_light_blue;
+        border: 1px solid $key_light_blue;
+        border-radius: 30px 30px 0 0;
+        text-align: center;
+        color: $key_light_blue;
+        font-size: rem(22);
+        padding: rem(15) 0;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+
+        @include sp {
+            border-radius: 24px;
+            width: 47%;
+            margin-bottom: 3.88%;
+        }
+
+
+        &:hover {
+            background-color: $key_light_blue;
+            color: #fff;
+        }
+
+        &.is-active {
+            background-color: #fff;
+
+            &:hover {
+                color: $key_light_blue;
+            }
+
+            @media (min-width: 768px) {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.product {
+    @include flex-sb;
+
+    flex-wrap: wrap;
+
+    @include sp {
+        flex-flow: column;
+    }
+
+
+    @include pc-only {
+        &::after {
+            content: "";
+            display: block;
+            max-width: 450px;
+            width: 30.84%;
+        }
+    }
+
+
+    &__item {
+        //max-width: 450px;
+        width: 30.84%;
+        min-height: 764px;
+
+        @include sp {
+            width: 100%;
+            max-width: 650px;
+            min-height: auto;
+        }
+    }
+}
+
+.item-search-heading {
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.42;
+    font-size: rem(28);
+}
+
+.item-search-count {
+    text-align: center;
+    font-weight: 400;
+    font-size: rem(22);
+    margin-top: rem(17);
+}
+
+.item-search-no-find {
+    text-align: center;
+    line-height: 1.52;
+    font-weight: 300;
+    font-size: rem(28);
+    padding: 3.9% 0;
+}
+
+.item-lens-pt02 {
+    .item-lens {
+        margin-bottom: 0;
+    }
+
+    .item-lens__col02--lens {
+        background-color: $bg_green;
+        border: none;
+    }
+
+    .item-kind__item--lens {
+        background-color: #ffffff;
+    }
+}

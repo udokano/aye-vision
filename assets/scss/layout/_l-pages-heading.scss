@@ -1,0 +1,32 @@
+.l-pages-heading {
+    border-radius: 20px 0 0  20px;
+    background-color: $key_light_blue;
+    margin-left: 4.91%;
+    padding: 3.95% 0;
+    padding-left: 4.38%;
+
+    @include sp {
+        padding: 13.95% 0;
+        padding-left: 7.38%;
+    }
+
+
+    &__texts {
+        color: #fff;
+    }
+
+    &__ttl, &__sub {
+        display: block;
+        letter-spacing: .1em;
+    }
+
+    &__ttl {
+        font-weight: 500;
+        font-size: rem(35);
+        margin-bottom: rem(8);
+    }
+
+    &__sub {
+        font-size: rem(18);
+    }
+}

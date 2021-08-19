@@ -1,0 +1,333 @@
+/* 記事本文だけのスタイル */
+/*エディタースタイル*/
+
+/* REM PX変換 */
+
+$baseFontsize: 16;
+
+html {
+    //font-size: 100%;
+    font-size: $baseFontsize + px;
+}
+
+@function rem($pixels) {
+    @return $pixels / $baseFontsize * 1rem;
+}
+
+$key_pink: #d42258;
+
+$key_blue: #005bac;
+
+$key_light_blue: #12a9e9;
+
+$key_light_green: #00ae97;
+
+$key_green: #59bf48;
+
+$line_color: #06c755;
+
+$bg_light_blue: #e1f6ff;
+
+$bg_light_green: #d7f9f4;
+
+$bg_green: #e0f8dc;
+
+$radius_val: 40px;
+
+$gosic: "ヒラギノ角ゴ StdN", "Hiragino Kaku Gothic StdN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+
+$maru_gosic: "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", "Yu Gothic UI", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+
+$min: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "klee", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
+
+$ryu_min: a-otf-ryumin-pr6n, serif;
+
+$catch_gold: #7f7846;
+
+$catch_gold02: #afa169;
+
+$din: "DINPro";
+
+/* ブレイクポイント指定 */
+
+$pc: 1600px; // PC
+$tab: 1024px; // タブレット
+$sp: 768px; // スマホ
+
+@mixin pc {
+    @media (max-width: $pc) {
+        @content;
+    }
+}
+
+@mixin pc-only {
+    @media (min-width: $sp) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: $sp) {
+        @content;
+    }
+}
+
+.c-cms {
+    p, div {
+        font-weight: 300;
+        font-size: rem(19);
+        letter-spacing: .0025em;
+        line-height: 1.895;
+        margin: 0;
+        margin-bottom: rem(25);
+    }
+
+    h2 {
+        font-size: rem(26);
+        font-weight: 500;
+        line-height: 1.43;
+        padding-bottom: .48rem;
+        border-bottom: 1px solid $key_light_blue;
+        margin-bottom: 1.2rem;
+        color: $key_light_blue;
+    }
+
+    h3 {
+        font-size: rem(24);
+        color: $key_light_blue;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+    }
+
+    h4 {
+        font-size: rem(20);
+        color: $key_light_blue;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+    }
+
+    img {
+        border-radius: 30px;
+    }
+
+    a {
+        color: #1a6fcb;
+        font-weight: 500;
+        font-size: rem(19);
+    }
+
+    img {
+        width: auto;
+        max-width: 100%;
+
+        &.alignright, &.aligncenter, &.alignleft {
+            margin-bottom: 1.2rem;
+            display: block;
+            float: none;
+        }
+
+        &.alignright {
+            margin-left: auto;
+        }
+
+        &.aligncenter {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &.alignleft {
+            margin-right: auto;
+        }
+    }
+
+    hr {
+        height: auto;
+    }
+
+    .c-col02 {
+        display: flex;
+
+        @media (max-width: 767px) {
+            flex-flow: column;
+        }
+
+        &__text {
+            flex: 1 3 auto;
+            font-size: rem(19);
+        }
+
+        &__thumb {
+            flex: 0 2 auto;
+
+            @media (max-width: 767px) {
+                margin-bottom: 11%;
+            }
+
+            &--right {
+                @media (min-width: 768px) {
+                    margin-left: rem(32);
+                }
+            }
+
+            &--left {
+                @media (min-width: 768px) {
+                    margin-right: rem(32);
+                }
+            }
+        }
+    }
+
+    .u-pc-hidden {
+        display: none;
+
+        @include sp {
+            display: block;
+        }
+    }
+
+    .u-sp-hidden {
+        display: block;
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    ul, ol {
+        margin-bottom: 1.25rem;
+    }
+
+    ul > li {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    ol > li {
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+
+    strong {
+        font-weight: 600;
+        background-color: #FFF3FC;
+        color: #FC88D4;
+        padding: 2px 3px;
+    }
+
+    /*bold*/
+
+    .oomozi {
+        font-size: rem(26);
+        font-weight: 500;
+    }
+
+    .huto {
+        font-weight: 600;
+    }
+
+    /*bold red*/
+
+    .hutoaka {
+        color: #FF4CC3;
+    }
+
+    /*bold yellow*/
+
+    .hutoyellow {
+        color: #FBA519;
+    }
+
+    /*sm font-size*/
+
+    .komozi {
+        font-size: .9rem;
+    }
+
+    .ymarker {
+        background: #FFFF90;
+        padding: 3px 4px;
+    }
+
+    .rmarker {
+        background: #FFEFF0;
+        padding: 3px 4px;
+    }
+
+    .boxes-style {
+        padding: 20px;
+        margin-bottom: 20px;
+        line-height: 1.55;
+    }
+
+    .underline-yellow {
+        background: linear-gradient(transparent 60%, #ffff66 60%);
+        padding-bottom: 3px;
+    }
+
+    .yellowbox {
+        border: solid 1px #FFEEBF;
+        background-color: #FFFEF6;
+    }
+
+    .redbox {
+        border: solid 1px #FED9DA;
+        background-color: #FFF5F5;
+    }
+
+    .graybox {
+        border: solid 1px #ccc;
+        background-color: #f3f3f3;
+    }
+
+    .bluebox {
+        border: solid 1px #D1D1FF;
+        background-color: #F5F4FE;
+    }
+
+    .greenbox {
+        border: solid 1px #BFDFB0;
+        background-color: #F8FFF9;
+    }
+
+    .blaunbox {
+        border: solid 1px #FFDDCA;
+        background-color: #FFF4ED;
+    }
+
+    blockquote {
+        background-color: #fbfbfb;
+        background-repeat: no-repeat;
+        background-position: left top;
+        padding: .98rem;
+        margin: 0;
+        margin-bottom: 1.25rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #CCC;
+        display: block;
+        font-size: .95rem;
+
+        p {
+            line-height: 1.24;
+            margin-bottom: .68rem;
+        }
+    }
+
+    .sankou {
+        font-size: rem(14);
+        text-align: center;
+        background-color: #f8f8f8;
+        color: #454545;
+        border: 1px solid #ccc;
+        padding: 23px 20px;
+        margin: 15px 0;
+        display: block;
+        word-break: break-all;
+    }
+}

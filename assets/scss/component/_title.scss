@@ -1,0 +1,103 @@
+.c-title-top-line {
+    text-align: center;
+    position: relative;
+    font-weight: lighter;
+
+    &::after {
+        content: "";
+
+        @include trans_x;
+
+        top: rem(-160);
+        height: rem(98);
+        width: 1px;
+        background-color: #000;
+
+        @include sp {
+            top: rem(-120);
+            height: rem(78);
+        }
+    }
+
+    &__main, &__sub {
+        display: block;
+        line-height: 1;
+    }
+
+    &__main {
+        font-size: rem(80);
+        margin-bottom: rem(18);
+
+        @include sp {
+            font-size: 2.9rem;
+        }
+    }
+
+    &__sub {
+        font-size: 1rem;
+    }
+}
+
+.c-ttl-vertical {
+    writing-mode: vertical-rl;
+    line-height: 1.4;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+
+    &__main {
+        font-size: rem(40);
+        display: inline-block;
+
+        @include sp {
+            font-size: 1.95rem;
+        }
+    }
+
+    &__eng {
+        text-orientation: sideways;
+        display: inline-block;
+        font-size: rem(15);
+    }
+
+    @include sp {
+        font-size: 2.1rem;
+    }
+}
+
+.c-title-under-wave {
+    color: $key_pink;
+    text-align: center;
+    font-size: rem(20);
+
+    &__in {
+        display: inline-block;
+        padding-bottom: rem(10);
+        background: url(../images/common/c_title_under_wave.png) repeat-x 50% 100%;
+        background-size: 100% auto;
+        line-height: 1.32;
+
+        @include sp {
+            line-height: 1.78;
+        }
+    }
+}
+
+.c-ttl-under-eng {
+    text-align: center;
+
+    &__main, &__sub {
+        display: block;
+    }
+
+    &__main {
+        font-size: rem(40);
+        line-height: 1.32;
+        margin-bottom: 10px;
+    }
+
+    &__sub {
+        color: $key_blue;
+        font-size: rem(15);
+    }
+}

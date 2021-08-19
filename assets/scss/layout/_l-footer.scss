@@ -1,0 +1,298 @@
+.l-page-top {
+    text-align: center;
+    padding: 50px 0;
+
+    @include sp {
+        padding: 7.888% 0;
+    }
+
+
+    &__link {
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__icon {
+        width: rem(46);
+        height: rem(50);
+        fill: $key_blue;
+
+        @include sp {
+            width: rem(66);
+            height: rem(70);
+        }
+    }
+}
+
+.l-footer {
+    background-color: #f2f2f2;
+    padding: 65px 0;
+
+    @include sp {
+        padding: 9% 0 9%;
+        margin-bottom: rem(60);
+    }
+
+
+    &__inner {
+        @include flex-sb;
+
+        align-items: center;
+
+        @include sp {
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        max-width: 265px;
+        width: 19.21%;
+
+        @include sp {
+            width: 100%;
+            max-width: 560px;
+        }
+    }
+
+    &__center {
+        max-width: 750px;
+        width: 48.7%;
+
+        @include sp {
+            width: 100%;
+            max-width: 660px;
+        }
+    }
+
+    &__right {
+        max-width: 392px;
+        width: 25.45%;
+
+        @include sp {
+            width: 100%;
+            max-width: 560px;
+            padding-bottom: 6%;
+        }
+    }
+
+    &__sp-copy {
+        text-align: center;
+        background-color: #fff;
+        padding: 6.888% 0;
+    }
+}
+
+.l-footer-info {
+    @include sp {
+        @include flex-sb;
+
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+
+    &__logo {
+        margin-bottom: 16px;
+        display: block;
+        width: 82%;
+
+        @include sp {
+            width: 40%;
+            padding: 0 4.2%;
+        }
+    }
+
+    .shop-info__tel {
+        //white-space: nowrap;
+
+        @include sp {
+            width: 60%;
+        }
+    }
+
+    .shop-info__sub {
+        font-size: rem(20);
+        padding-right: rem(22);
+
+        &::after {
+            right: rem(11);
+        }
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    .shop-info__number {
+        font-size: rem(30);
+
+        @include sp {
+            font-size: 2.68rem;
+            margin-bottom: 3.5%;
+            display: inline-block;
+        }
+    }
+
+    &__pc-copy {
+        font-size: rem(10);
+    }
+
+    &__sp-heading {
+        text-align: center;
+        padding-bottom: 5.65%;
+        margin-bottom: 3%;
+        font-size: 1.04rem;
+        width: 100%;
+        line-height: 1.32;
+        background: url(../images/common/c_footer_catch.png) no-repeat 50% 100%;
+        background-size: 100% auto;
+    }
+
+    &__sp-time {
+        color: #000;
+        font-size: .9rem;
+        line-height: 1.35;
+    }
+}
+
+.l-footer-table {
+    @include flex-sb;
+    @include sp {
+        flex-flow: column;
+        margin-bottom: 10%;
+    }
+
+
+    &__item {
+        max-width: 344px;
+        width: 47.87%;
+
+        //flex: 1 0 45.87%;
+
+        @include sp {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 5%;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.l-footer-nav {
+    column-count: 3;
+
+    @include sp {
+        column-count: 2;
+    }
+
+
+    &__item {
+        font-size: rem(14);
+        margin-bottom: 32px;
+        text-indent: rem(-15);
+        margin-left: rem(15);
+
+        @include sp {
+            color: $key_blue;
+            font-size: 1.08rem;
+            margin-bottom: 11.5%;
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding-left: rem(15);
+
+        &::after {
+            content: "";
+
+            @include trans_y;
+
+            height: 1px;
+            width: rem(11);
+            background-color: $key_blue;
+            left: 0;
+        }
+    }
+}
+
+.l-foot-action {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: none;
+    overflow: hidden;
+    z-index: 9999;
+
+    @include sp {
+        @include flex-sb;
+    }
+
+
+    &__item {
+        width: 33.33333333%;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        height: 100%;
+        padding: rem(9) 0;
+    }
+}
+
+.l-foot-tel {
+    border: 1px solid $key_blue;
+    background-color: #fff;
+    color: $key_blue;
+    text-align: center;
+    border-radius: 13px 0 0 0;
+
+    &__link {}
+
+    &__number {
+        font-size: 1.418rem;
+        margin-bottom: .88%;
+    }
+
+    &__guide {
+        font-size: .8rem;
+    }
+}
+
+.l-foot-reserve {
+    border: 1px solid $key_blue;
+    background-color: $key_blue;
+    color: #fff;
+
+    &__link {
+        @include flex-all-center;
+
+        font-size: 1.22rem;
+    }
+}
+
+.l-foot-line {
+    background-color: $line_color;
+    border: 1px solid $line_color;
+    border-radius: 0 13px 0 0;
+
+    &__link {}
+
+    &__icon {
+        @include trans_xy;
+
+        fill: #fff;
+        width: 53%;
+        height: 51%;
+    }
+}

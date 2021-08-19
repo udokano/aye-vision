@@ -1,0 +1,104 @@
+.blog-archive {
+    padding: 49px 0 26px;
+
+    @include sp {
+        padding: 13% 0 3.2%;
+    }
+
+
+    &__area {
+        @include flex-sb;
+
+        flex-wrap: wrap;
+        padding: 0 1.95%;
+
+        @include sp {
+            flex-flow: column;
+        }
+
+
+        @include pc-only {
+            &::after {
+                content: "";
+                max-width: 440px;
+                width: 30.08%;
+                margin: 0 1.05% 5%;
+            }
+        }
+    }
+
+    &__post {
+        max-width: 440px;
+        width: 30.08%;
+        margin: 0 1.05% 5%;
+
+        @include sp {
+            max-width: 650px;
+            width: 100%;
+            margin: 0 0 8%;
+        }
+    }
+
+    &__link {
+        @include sp {
+            @include flex-sb;
+        }
+    }
+
+    &__thumb {
+        height: 296px;
+        margin-bottom: 15px;
+
+        @include sp {
+            height: 27vw;
+            width: 40%;
+        }
+    }
+
+    &__contents {
+        @include sp {
+            width: 56%;
+            padding-top: 2.8%;
+        }
+    }
+
+    &__date {
+        font-size: rem(11);
+        color: #b8b8b8;
+        font-weight: lighter;
+
+        @include sp {
+            font-size: .95rem;
+        }
+    }
+
+    &__ttl {
+        font-size: rem(22);
+        font-weight: 600;
+        margin: 11px 0;
+
+        @include sp {
+            margin: 6px 0;
+        }
+    }
+
+    &__desc {
+        font-size: rem(16.02);
+        letter-spacing: .025em;
+        color: #878787;
+        line-height: 1.75;
+        font-weight: lighter;
+
+        @include sp {
+            line-height: 1.32;
+        }
+    }
+
+    &__arw {
+        fill: #878787;
+        width: rem(60);
+        height: rem(7);
+        stroke-width: 1;
+        stroke: #878787;
+    }
+}

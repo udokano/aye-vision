@@ -1,0 +1,108 @@
+.u-vertical {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+.u-pc-hidden {
+    display: none;
+
+    @include sp {
+        display: block;
+    }
+}
+
+.u-pc-hidden-i {
+    display: none !important;
+
+    @include sp {
+        display: block !important;
+    }
+}
+
+.u-sp-hidden {
+    display: block;
+
+    @include sp {
+        display: none;
+    }
+}
+
+.u-sp-hidden-i {
+    display: block !important;
+
+    @include sp {
+        display: none !important;
+    }
+}
+
+.u-all-hidden {
+    display: none !important;
+}
+
+.u-ob-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+.u-text-under-line {
+    text-decoration: underline;
+}
+
+.u-mark {
+    position: relative;
+    padding: 0 rem(3);
+    padding-bottom: rem(2);
+    background: linear-gradient(transparent 60%, #fff799 0%);
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: rem(10);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.u-object-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.u-radius-50 {
+    border-radius: 50px;
+
+    @include sp {
+        border-radius: 25px;
+    }
+}
+
+.u-radius-40 {
+    border-radius: 40px;
+
+    @include sp {
+        border-radius: 20px;
+    }
+}
+
+.u-radius-30 {
+    border-radius: 30px;
+
+    @include sp {
+        border-radius: 15px;
+    }
+}
+
+.u-mb0 {
+    margin-bottom: 0 !important;
+}
