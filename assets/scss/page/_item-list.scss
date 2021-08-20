@@ -1,5 +1,6 @@
 .item-list {
     padding: 1.22% 0 4.955%;
+    text-align: center;
 
     @include sp {
         padding: 8.55% 0;
@@ -13,6 +14,36 @@
     &__intro {
         font-size: rem(15);
         text-align: center;
+    }
+
+    &__box {
+        display: inline-block;
+        margin-top: 2.55%;
+        padding: 1.68% 2.255%;
+        background-color: $bg_light_blue;
+        border: 4px solid #b0daff;
+
+        @include sp {
+            margin-top: 5.55%;
+            padding: 3.68% 3.255%;
+        }
+    }
+
+    &__supplement {
+        margin-bottom: 3.35%;
+        text-align: center;
+        font-size: rem(28);
+        font-weight: 500;
+        line-height: 1.45;
+        color: $key_blue;
+        text-decoration: underline;
+    }
+
+    &__tel {
+        display: inline-block;
+        color: $key_blue;
+        font-weight: 600;
+        font-size: 3.388rem;
     }
 }
 
@@ -90,7 +121,9 @@
     &__item {
         //max-width: 450px;
         width: 30.84%;
-        min-height: 764px;
+        min-height: rem(800);
+
+        //max-height: rem(768);
 
         @include sp {
             width: 100%;

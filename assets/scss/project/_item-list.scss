@@ -165,7 +165,9 @@
     }
 
 
-    &__main {}
+    &__main {
+        margin-bottom: 10%;
+    }
 
     &__brand {
         transform: scale(0.5);
