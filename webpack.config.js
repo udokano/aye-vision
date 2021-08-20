@@ -3,9 +3,9 @@ const path = require('path');
 
 
 module.exports = {
-    // モード値を production に設定すると最適化された状態で、
+    // モード値を development に設定すると最適化された状態で、
     // development に設定するとソースマップ有効でJSファイルが出力される
-    mode: "production",
+    mode: "development",
 
     // メインのJS
     entry: './assets/scripts/index.js',
@@ -29,7 +29,19 @@ module.exports = {
                     }
                 ],
             },
-
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                '@babel/preset-env', // デフォルトでES5になるはず
+                            ]
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
