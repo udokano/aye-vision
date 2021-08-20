@@ -75,7 +75,7 @@ $now_cat_name = $now_cat_obj->name;
 										<p class="item-list__intro">1日使い捨てだから衛生的、コンタクトレンズデビューにおすすめ</p>
 
 										 <div class="item-list__box">
-											  <p class="item-list__supplement">メーカーや箱数によって送料がかかることがございますので、<br class="">お取り寄せも可能です。</p>
+											  <p class="item-list__supplement">メーカーや箱数によって送料がかかることがございますが、<br class="">お取り寄せも可能です。</p>
 
                                               <a href="tel:03-3885-3177" class="item-list__tel" target="_blank">
 												03-3885-3177
