@@ -61,7 +61,7 @@
 
     &__center {
         max-width: 750px;
-        width: 48.7%;
+        width: 43.7%;
 
         @include sp {
             width: 100%;
@@ -70,8 +70,8 @@
     }
 
     &__right {
-        max-width: 392px;
-        width: 25.45%;
+        max-width: 482px;
+        width: 32.45%;
 
         @include sp {
             width: 100%;
@@ -187,7 +187,7 @@
 }
 
 .l-footer-nav {
-    column-count: 3;
+    column-count: 4;
 
     @include sp {
         column-count: 2;
@@ -199,6 +199,11 @@
         margin-bottom: 32px;
         text-indent: rem(-15);
         margin-left: rem(15);
+
+        @include pc-only {
+            white-space: nowrap;
+        }
+
 
         @include sp {
             color: $key_blue;
@@ -295,4 +300,22 @@
         width: 53%;
         height: 51%;
     }
+}
+
+.l-footer-inner-lang {
+    @include pc-only {
+        justify-content: center;
+
+        &__left, &__right {
+            margin: 0 2%;
+        }
+
+        &__right {
+            width: 52%;
+            max-width: 1200px;
+        }
+    }
+
+
+    &__left {}
 }

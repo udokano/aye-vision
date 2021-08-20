@@ -1,5 +1,6 @@
 .l-header {
     padding: 16px 0 0;
+    position: relative;
 
     @include sp {
         padding: 0;
@@ -231,6 +232,36 @@
                     transform: translateY(-50%) rotate(45deg);
                 }
             }
+        }
+    }
+}
+
+
+/* 多言語 */
+
+@include pc-only {
+    .l-header-inner-lang {
+        display: block;
+
+        &__left {
+            width: 42%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &__right {
+            position: absolute;
+            top: 2.8%;
+            width: 5%;
+            right: 2.2%;
+        }
+
+        &__logo {
+            justify-content: center;
+        }
+
+        &__switch {
+            width: 100%;
         }
     }
 }
