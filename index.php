@@ -14,7 +14,7 @@
 ?>
 
 <?php if ( have_rows( 'rp_fv_slide', $post_ID ) ) : ?>
-<div class="l-key-visual" id="app" v-cloak>
+<div class="l-key-visual" id="app-top-slide" v-cloak>
 	<ul class="l-key-visual__slide">
   <slick ref="slick" :options="slickOptions">
 	  <?php
