@@ -154,6 +154,9 @@
     padding: 2.08% 2.12% 2.08%;
     margin-bottom: 3.38%;
     position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 
     @include sp {
         padding: 8.08% 5.12%;
@@ -161,6 +164,10 @@
         margin-bottom: 7.888%;
     }
 
+
+    &__main {
+        margin-bottom: 10%;
+    }
 
     &__brand {
         transform: scale(0.5);
@@ -252,6 +259,10 @@
         margin-top: 24px;
         margin-bottom: 5px;
 
+        &--sub {
+            margin-top: 0;
+        }
+
         @include sp {
             font-size: 1.72rem;
         }
@@ -273,18 +284,23 @@
         }
     }
 
+    &__box-rp {
+        padding-bottom: 8%;
+    }
+
     &__col {
         margin-top: 21px;
         display: flex;
         justify-content: flex-end;
         color: $key_pink;
         margin-bottom: 8%;
-        padding-bottom: 20%;
+
+        //padding-bottom: 20%;
 
         @include sp {
             justify-content: center;
             margin: 7% 0;
-            margin-bottom: 0;
+            margin-bottom: 13%;
         }
     }
 
@@ -328,10 +344,12 @@
 
     &__btn-col {
         @include flex-sb;
-        @include trans_x;
+
+        //@include trans_x;
 
         bottom: 4%;
-        width: 90%;
+
+        // width: 90%;
 
         @include sp {
             transform: none;

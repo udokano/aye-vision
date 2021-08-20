@@ -72,6 +72,20 @@ $now_cat_name = $now_cat_obj->name;
 
 										<!-- <p class="item-list__intro">1日使い捨てだから衛生的、コンタクトレンズデビューにおすすめ</p> -->
 
+                                        <?php if ( 'soft-lens' === $show_item ) : ?>
+
+                                        <div class="item-list__box">
+											  <p class="item-list__supplement">これらの商品はお取り寄せのみとなっております。</p>
+
+                                              <a href="tel:03-3885-3177" class="item-list__tel" target="_blank">
+												03-3885-3177
+												</a>
+
+										</div>
+										<!-- ./box -->
+
+							            <?php endif; ?>
+
 							</div>
 </section>
 

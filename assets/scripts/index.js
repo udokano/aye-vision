@@ -55,32 +55,3 @@ import accordion_qa_vue from './components/accordion-qa.js';
 /* ページ独自 */
 
 import reserve from './page/reserve.js';
-
-
-/**
- *
- * 読み込んだモデュールの発動
- */
-
-tab();
-
-
-//ImageMaps(" img [ImageMap] ");
-
-
-
-$(".js-cv-close").on("click", function () {
-    $("#js-action").removeClass("is-open");
-});
-
-if (window.matchMedia("(max-width: 768px)").matches) {
-
-
-    var bottomActionHeight = $("#js-fixed-nav-elm").outerHeight();
-
-    $("#js-footer").css("padding-bottom", bottomActionHeight + "px");
-
-
-} else {
-
-}

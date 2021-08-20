@@ -27,7 +27,7 @@
 						<span class="p-single__date">
 							<time datetime="<?php echo get_the_date( 'Y年Md日' ); ?>"><?php echo get_the_date( 'Y年Md日' ); ?></time>
 						</span>
-						<span class="p-single__clinic">中村眼科クリニック</span>
+						<span class="p-single__clinic">スタッフ</span>
 					</p>
 
 					<div class="p-single-content c-cms">

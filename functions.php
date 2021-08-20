@@ -509,33 +509,32 @@ add_action( 'pre_get_posts', 'query_at_home' );
 
 
 
-function query_at_home02( $query ) {
-	if ( is_admin() || ! $query->is_main_query() ) {
-		return;
-	}
-	if ( $query->is_post_type_archive( 'machine' ) ) {
-		$query->set( 'post_type', 'machine' );
-		$query->set( 'order', 'ASC' );
-		$query->set( 'posts_per_page', -1 );
-		return;
-	}
-}
-add_action( 'pre_get_posts', 'query_at_home02' );
-
-
-
 
 function query_at_item_search( $query ) {
 	if ( is_admin() || ! $query->is_main_query() ) {
 		return;
 	}
 	if ( $query->is_search() ) {
+        $query->set( 'post_status', 'publish' );
 		$query->set( 'category_name', 'item' );
 		$query->set( 'posts_per_page', -1 );
 		return;
 	}
 }
 add_action( 'pre_get_posts', 'query_at_item_search' );
+
+
+function query_at_category( $query ) {
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+	if ( $query->is_category() ) {
+        $query->set( 'post_status', 'publish' );
+		$query->set( 'posts_per_page', -1 );
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'query_at_category' );
 
 
 /**

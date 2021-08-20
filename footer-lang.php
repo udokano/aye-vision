@@ -17,11 +17,11 @@
 
 <?php endif; ?>
 
-
+<?php if ( is_page( 'shop-info-eng' ) ) : ?>
 <footer class="l-footer">
-	<div class="l-inner l-footer__inner">
-			<div class="l-footer__left l-footer-info">
-				<p class="u-pc-hidden l-footer-info__sp-heading">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</p>
+	<div class="l-inner l-footer__inner l-footer-inner-lang">
+			<div class="l-footer__left l-footer-info  l-footer-inner-lang__left">
+				<p class="u-pc-hidden l-footer-info__sp-heading">If you are looking for contact lenses in Hanabata, Adachi-ku (near Takenotsuka Station), leave it to eye-Vision.</p>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
 				</a>
@@ -29,57 +29,48 @@
 				<a href="tel:03-3885-3177" class="shop-info__tel">
 												<span class="shop-info__sub">TEL</span>
 												<span class="shop-info__number">03-3885-3177</span>
-												<p class="u-pc-hidden l-footer-info__sp-time">営業時間  9：00～19：00  　定休日  水曜・祝日</p>
+												<p class="u-pc-hidden l-footer-info__sp-time">Business hours: 9:00-19:00 Closed on Wednesdays and national holidays</p>
 				</a>
 
 				<p class="l-footer-info__pc-copy u-sp-hidden">Copyright (c) EYE VISION All rights reserved.</p>
 			</div>
 			<!-- ./left -->
-			<ul class="l-footer__center l-footer-table">
-					<li class="l-footer-table__item c-table-footer">
-						 <?php get_template_part( 'inc/table-info01' ); ?>
-					</li>
-					<!-- ./item -->
-					<li class="l-footer-table__item c-table-footer">
-						 <?php get_template_part( 'inc/table-info02' ); ?>
-					</li>
-					<!-- ./item -->
-			</ul>
 
-			<ul class="l-footer__right l-footer-nav">
+
+			<ul class="l-footer__right l-footer-nav  l-footer-inner-lang__right">
 				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>reserve?services=3" class="l-footer-nav__link">来店ご予約</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>reserve?services=3" class="l-footer-nav__link">reserve</a>
 				</li>
 				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>news" class="l-footer-nav__link">お知らせ</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>news" class="l-footer-nav__link">news</a>
 				</li>
 				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>item-info" class="l-footer-nav__link">商品情報</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>item-info" class="l-footer-nav__link">Product Info</a>
 				</li>
 				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>guide" class="l-footer-nav__link">初めての方</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>guide" class="l-footer-nav__link">First time user</a>
 				</li>
 				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">よくある質問</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">FAQ</a>
+                </li>
+                	<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">Blog</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">Store Guide</a>
+                </li>
+                 <li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-eng" class="l-footer-nav__link">Store Guide(English)</a>
                 </li>
                 <li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">ブログ</a>
-				</li>
-				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">店舗案内</a>
-                </li>
-                <li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-eng" class="l-footer-nav__link">店舗案内(英語)</a>
-                </li>
-                <li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-ch" class="l-footer-nav__link">店舗案内(中国)</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-ch" class="l-footer-nav__link">Store Guide(China)</a>
 				</li>
 
 				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>recruit" class="l-footer-nav__link">採用情報</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>recruit" class="l-footer-nav__link">Recruit</a>
 				</li>
 				<li class="l-footer-nav__item">
-					<a href="http://yokoyama-ganka.jp/" class="l-footer-nav__link" target="_blank">提携眼科</a>
+					<a href="http://yokoyama-ganka.jp/" class="l-footer-nav__link" target="_blank">Lift Eye</a>
 				</li>
 
 			</ul>
@@ -92,12 +83,12 @@
 	<li class="l-foot-action__item l-foot-tel">
 		<a href="tel:03-3885-3177" class="l-foot-action__link l-foot-tel__link" target="_blank">
 				<p class="l-foot-tel__number">03-3885-3177</p>
-				<p class="l-foot-tel__guide">営業時間  9：00～19：00<br>定休日 水曜・祝日</p>
+				<p class="l-foot-tel__guide">Time 9：00～19：00<br>Closed on Wednesdays and national holidays</p>
 		</a>
 	</li>
 	<li class="l-foot-action__item l-foot-reserve">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>reserve?services=3" class="l-foot-action__link l-foot-reserve__link" target="_blank">
-			   <p class="l-foot-reserve__text">来店ご予約</p>
+			   <p class="l-foot-reserve__text">Recruit</p>
 		</a>
 	</li>
 	<li class="l-foot-action__item l-foot-line">
@@ -106,7 +97,89 @@
 		</a>
 	</li>
 </ul>
+<?php endif; ?>
 
+<?php if ( is_page( 'shop-info-ch' ) ) : ?>
+<footer class="l-footer">
+	<div class="l-inner l-footer__inner l-footer-inner-lang">
+			<div class="l-footer__left l-footer-info  l-footer-inner-lang__left">
+				<p class="u-pc-hidden l-footer-info__sp-heading">如果您要在足立区花畑（竹冢站附近）寻找隐形眼镜，请交给eye-Vision。</p>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
+				</a>
+
+				<a href="tel:03-3885-3177" class="shop-info__tel">
+												<span class="shop-info__sub">TEL</span>
+												<span class="shop-info__number">03-3885-3177</span>
+												<p class="u-pc-hidden l-footer-info__sp-time">营业时间。9:00-19:00 周三和国定假日休息</p>
+				</a>
+
+				<p class="l-footer-info__pc-copy u-sp-hidden">Copyright (c) EYE VISION All rights reserved.</p>
+			</div>
+			<!-- ./left -->
+
+
+			<ul class="l-footer__right l-footer-nav  l-footer-inner-lang__right">
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>reserve?services=3" class="l-footer-nav__link">储备</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>news" class="l-footer-nav__link">新闻</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>item-info" class="l-footer-nav__link">产品信息</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>guide" class="l-footer-nav__link">第一次使用</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">常见问题</a>
+                </li>
+                <li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">博客</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">商店指南</a>
+                </li>
+                 <li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-eng" class="l-footer-nav__link">商店指南(英语)</a>
+                </li>
+                <li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-ch" class="l-footer-nav__link">商店指南(中国)</a>
+				</li>
+
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>recruit" class="l-footer-nav__link">招聘</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="http://yokoyama-ganka.jp/" class="l-footer-nav__link" target="_blank">抬眼</a>
+				</li>
+
+			</ul>
+	</div>
+	<!-- ./inner -->
+	<p class="l-footer__sp-copy u-pc-hidden"><small>Copyright (c) EYE VISION All rights reserved.</small></p>
+</footer>
+
+<ul class="l-foot-action" id="js-app-action">
+	<li class="l-foot-action__item l-foot-tel">
+		<a href="tel:03-3885-3177" class="l-foot-action__link l-foot-tel__link" target="_blank">
+				<p class="l-foot-tel__number">03-3885-3177</p>
+				<p class="l-foot-tel__guide">时间：9：00～19：00<br>周三及国定假日休息</p>
+		</a>
+	</li>
+	<li class="l-foot-action__item l-foot-reserve">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>reserve?services=3" class="l-foot-action__link l-foot-reserve__link" target="_blank">
+			   <p class="l-foot-reserve__text">招聘</p>
+		</a>
+	</li>
+	<li class="l-foot-action__item l-foot-line">
+		<a href="https://page.line.me/lqk5945j?openQrModal=true" class="l-foot-action__link l-foot-line__link" target="_blank">
+				<svg class="l-foot-line__icon"><use xlink:href="#svg-icon-line"></use></svg>
+		</a>
+	</li>
+</ul>
+<?php endif; ?>
 </div>
 <!-- ./l-wrapper -->
 <script>

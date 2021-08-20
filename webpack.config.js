@@ -29,7 +29,19 @@ module.exports = {
                     }
                 ],
             },
-
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                '@babel/preset-env', // デフォルトでES5になるはず
+                            ]
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
