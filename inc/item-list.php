@@ -69,7 +69,7 @@
 											<div class="p-item__thumb">
 													<?php if ( ! empty( $item_zaiko ) ) : ?>
 														<?php if ( $item_zaiko || in_array( 'none', $item_zaiko ) ) : ?>
-															<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/item/icon_no_zaiko.svg" alt="在庫なし" class="p-item__balloon">
+															<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/item/icon_no_zaiko.svg?4855222" alt="在庫なし" class="p-item__balloon">
 														<?php endif; ?>
 													 <?php endif; ?>
 
