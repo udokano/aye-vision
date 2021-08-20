@@ -74,6 +74,16 @@ $now_cat_name = $now_cat_obj->name;
 
 										<p class="item-list__intro">1日使い捨てだから衛生的、コンタクトレンズデビューにおすすめ</p>
 
+										 <div class="item-list__box">
+											  <p class="item-list__supplement">メーカーや箱数によって送料がかかることがございますので、<br class="">お取り寄せも可能です。</p>
+
+                                              <a href="tel:03-3885-3177" class="item-list__tel" target="_blank">
+												03-3885-3177
+												</a>
+
+										</div>
+										<!-- ./box -->
+
 							<?php endif; ?>
 
 							<?php if ( '2week' === $show_item ) : ?>
@@ -85,21 +95,32 @@ $now_cat_name = $now_cat_obj->name;
 
 										<p class="item-list__intro">毎日コンタクトレンズを使用される方にお勧めです。</p>
 
+
+										<div class="item-list__box">
+											  <p class="item-list__supplement">お電話での事前注文も可能です</p>
+												<a href="tel:03-3885-3177" class="item-list__tel" target="_blank">
+												03-3885-3177
+												</a>
+										</div>
+										<!-- ./box -->
+
+
 							<?php endif; ?>
 							</div>
 </section>
+
 <ul class="l-inner item-anchor">
 	<li class="item-anchor__item is-active js-item-ajax-btn" data-slug="all">全て</li>
 		<li class="item-anchor__item js-item-ajax-btn" data-slug="circle-color">サークル・カラー</li>
 		<li class="item-anchor__item js-item-ajax-btn" data-slug="astigmatic-lens">乱視用レンズ</li>
-        <li class="item-anchor__item js-item-ajax-btn" data-slug="bifocal-lens">遠近両用レンズ</li>
-        <?php if ( '2week' === $show_item ) : ?>
-            <li class="item-anchor__item js-item-ajax-btn" data-slug="photochromatic-lens">調光レンズ</li>
-        <?php endif; ?>
+		<li class="item-anchor__item js-item-ajax-btn" data-slug="bifocal-lens">遠近両用レンズ</li>
+		<?php if ( '2week' === $show_item ) : ?>
+			<li class="item-anchor__item js-item-ajax-btn" data-slug="photochromatic-lens">調光レンズ</li>
+		<?php endif; ?>
 </ul>
 
 <div class="" id="js-item-ajax">
-         <?php get_template_part( 'inc/ajax-item-loop-list' ); ?>
+		 <?php get_template_part( 'inc/ajax-item-loop-list' ); ?>
 </div>
 
 
