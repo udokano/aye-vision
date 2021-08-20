@@ -3,9 +3,9 @@ const path = require('path');
 
 
 module.exports = {
-    // モード値を development に設定すると最適化された状態で、
+    // モード値を production に設定すると最適化された状態で、
     // development に設定するとソースマップ有効でJSファイルが出力される
-    mode: "development",
+    mode: "production",
 
     // メインのJS
     entry: './assets/scripts/index.js',
