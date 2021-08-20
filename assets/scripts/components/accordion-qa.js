@@ -33,7 +33,10 @@ Vue.component("accordion-qa", {
     }
 });
 
+const qaWrapElm = document.getElementById('js-app-qa');
 
-new Vue({
-    el: "#js-app-qa"
-});
+if (qaWrapElm !== null) {
+    new Vue({
+        el: "#js-app-qa"
+    });
+}
