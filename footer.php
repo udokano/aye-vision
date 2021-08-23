@@ -154,7 +154,7 @@
 							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item-normal/?item_cat=care");
 					}
 
-		 //console.log(btnHref);
+
 		$(".js-item-ajax").removeClass("is-active");
 		  $(this).addClass('is-active');
 		$.ajax({
@@ -166,9 +166,6 @@
 			success: function (response) {
 				jQuery("#js-item-ajax").html(response);
 				// btnElm.attr("href",split);
-
-				//console.log("成功");
-				console.log(currentCat);
 			}
 		});
 	});
@@ -196,10 +193,6 @@
 			},
 			success: function (response) {
 				jQuery("#js-item-ajax").html(response);
-
-
-				console.log("成功");
-				console.log(currentCat);
 			}
 		});
 	});
