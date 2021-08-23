@@ -190,7 +190,7 @@
 <?php endif; ?>
 </div>
 <!-- ./l-wrapper -->
-<script>
+<script defer>
   (function(d) {
 	var config = {
 	  kitId: 'tdr0hhf',
@@ -204,86 +204,3 @@
 
 </body>
 <?php wp_footer(); ?>
-
-
-
-<script>
-
-	$(function () {
-
-	$(".js-item-ajax").eq(0).addClass('is-active');
-	$(".js-item-ajax").on("click", function () {
-		var currentCat = $(this).attr("data-slug");
-		var btnElm = $("#js-ajax-link-toggle");
-		 //var btnHref = btnElm.attr("href");
-		 //var btnSplit = btnElm.attr("href").split('=');
-		 //var split = btnHref.replace(btnSplit[1],currentCat);
-
-					if("1day" == currentCat) {
-							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item/?item_cat=1day");
-					}
-
-					 if("2week" == currentCat) {
-							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item/?item_cat=2week");
-					}
-
-					 if("care" == currentCat) {
-							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item-normal/?item_cat=care");
-					}
-
-		 //console.log(btnHref);
-		$(".js-item-ajax").removeClass("is-active");
-		  $(this).addClass('is-active');
-		$.ajax({
-			type: "POST",
-			url: "<?php echo esc_url( get_template_directory_uri() ); ?>/inc/ajax-item-loop-top.php",
-			data: {
-				current_cat: currentCat,
-			},
-			success: function (response) {
-				jQuery("#js-item-ajax").html(response);
-				// btnElm.attr("href",split);
-
-				//console.log("成功");
-				console.log(currentCat);
-			}
-		});
-	});
-});
-
-	</script>
-
-	<script>
-
-	$(function () {
-	$(".js-item-ajax-btn").on("click", function () {
-
-		var currentCat = $(this).attr("data-slug");
-
-		var params = (new URL(document.location)).searchParams;
-		var urlCat = params.get('item_cat');
-		$(".js-item-ajax-btn").removeClass("is-active");
-		  $(this).addClass('is-active');
-		$.ajax({
-			type: "POST",
-			url: "<?php echo esc_url( get_template_directory_uri() ); ?>/inc/ajax-item-loop-list.php",
-			data: {
-				current_cat: currentCat,
-				item_cat: urlCat,
-			},
-			success: function (response) {
-				jQuery("#js-item-ajax").html(response);
-
-
-				console.log("成功");
-				console.log(currentCat);
-			}
-		});
-	});
-});
-
-	</script>
-
-	<?php if ( is_single() && in_category( 'item' ) || is_page( 'usces-cart' ) ) : ?>
-		<?php get_template_part( 'inc/validation' ); ?>
-	<?php endif; ?>

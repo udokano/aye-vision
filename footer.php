@@ -114,7 +114,7 @@
 
 </div>
 <!-- ./l-wrapper -->
-<script>
+<script defer>
   (function(d) {
 	var config = {
 	  kitId: 'tdr0hhf',
@@ -130,9 +130,9 @@
 
 
 
-<script>
+<script defer>
 
-	$(function () {
+	window.addEventListener( 'load', function(){
 
 	$(".js-item-ajax").eq(0).addClass('is-active');
 	$(".js-item-ajax").on("click", function () {
@@ -176,9 +176,9 @@
 
 	</script>
 
-	<script>
+	<script defer>
 
-	$(function () {
+	 window.addEventListener( 'load', function(){
 	$(".js-item-ajax-btn").on("click", function () {
 
 		var currentCat = $(this).attr("data-slug");
