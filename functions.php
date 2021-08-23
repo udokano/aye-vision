@@ -211,6 +211,7 @@ EOT;
 }
 add_filter( 'style_loader_tag', 'load_css_async_top', 10, 4 );
 
+
 /**
  *
  * エディタースタイル読み込み
@@ -1248,11 +1249,13 @@ function remove_menus_user() {
 add_action( 'admin_menu', 'remove_menus_user' );
 
 
+	global $current_user;
+	if ( $current_user->ID == 2 ) {
 function custom_columns( $columns ) {
-		global $current_user;
+
 		// var_dump($columns);
-	wp_get_current_user();
-	if ( $current_user->ID == 2 ) { // ユーザーIDを指定、該当ユーザーなら以下を適用
+	//wp_get_current_user();
+// ユーザーIDを指定、該当ユーザーなら以下を適用
 		unset( $columns['author'] );
 		unset( $columns['tags'] );
 		  unset( $columns['comments'] );
@@ -1260,11 +1263,11 @@ function custom_columns( $columns ) {
 		unset( $columns['details'] );   // SEO keyword
 
 		return $columns;
-	}
+
 }
 add_filter( 'manage_posts_columns', 'custom_columns' );
 
-
+	}
 
 add_filter(
 	'contextual_help',
