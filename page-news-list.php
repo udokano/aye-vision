@@ -33,7 +33,7 @@ if ( isset( $_REQUEST['tax'] ) ) {
 
 // var_dump( $news_years );
 
- echo $session_news_year;
+ //echo $session_news_year;
 
 	$news_year_arg[] = array();
 
