@@ -21,7 +21,12 @@
 <footer class="l-footer">
 	<div class="l-inner l-footer__inner">
 			<div class="l-footer__left l-footer-info">
-				<p class="u-pc-hidden l-footer-info__sp-heading">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</p>
+				<?php if ( is_home() || is_front_page() ) : ?>
+						<h1 class="u-pc-hidden l-footer-info__sp-heading">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</h1>
+				<?php else : ?>
+							<p class="u-pc-hidden l-footer-info__sp-heading">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</p>
+				<?php endif; ?>
+
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
 				</a>
@@ -61,17 +66,17 @@
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">よくある質問</a>
-                </li>
-                <li class="l-footer-nav__item">
+				</li>
+				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">ブログ</a>
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">店舗案内</a>
-                </li>
-                <li class="l-footer-nav__item">
+				</li>
+				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-eng" class="l-footer-nav__link">店舗案内(英語)</a>
-                </li>
-                <li class="l-footer-nav__item">
+				</li>
+				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-ch" class="l-footer-nav__link">店舗案内(中国)</a>
 				</li>
 
@@ -147,7 +152,7 @@
 			} else {
 				// Possibly fall back to a more compatible method here
 			}
-        });
+		});
 
 
 

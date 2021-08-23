@@ -21,7 +21,11 @@
 <footer class="l-footer">
 	<div class="l-inner l-footer__inner l-footer-inner-lang">
 			<div class="l-footer__left l-footer-info  l-footer-inner-lang__left">
-				<h1 class="u-pc-hidden l-footer-info__sp-heading">If you are looking for contact lenses in Hanabata, Adachi-ku (near Takenotsuka Station), leave it to Eye-Vision.</h1>
+
+
+                    <p class="u-pc-hidden l-footer-info__sp-heading">If you are looking for contact lenses in Hanabata, Adachi-ku (near Takenotsuka Station), leave it to Eye-Vision.</p>
+
+
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
 				</a>
@@ -103,7 +107,11 @@
 <footer class="l-footer">
 	<div class="l-inner l-footer__inner l-footer-inner-lang">
 			<div class="l-footer__left l-footer-info  l-footer-inner-lang__left">
-				<h1 class="u-pc-hidden l-footer-info__sp-heading">如果您要在足立区花畑（竹冢站附近）寻找隐形眼镜，请交给Eye-Vision。</h1>
+
+
+                <p class="u-pc-hidden l-footer-info__sp-heading">如果您要在足立区花畑（竹冢站附近）寻找隐形眼镜，请交给Eye-Vision。</p>
+
+
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
 				</a>
