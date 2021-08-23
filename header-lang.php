@@ -38,10 +38,10 @@ define( 'DUMMY', 'src=' . PATH . '' );
 
 				<div class="l-header__left l-logo-area l-header-inner-lang__left">
 					<?php if ( is_page( 'shop-info-eng' ) ) : ?>
-						<h1 class="l-logo-area__catch u-sp-hidden">If you are looking for contact lenses in the United States, leave it to EyeVision.</h1>
+						<p class="l-logo-area__catch u-sp-hidden">If you are looking for contact lenses in the United States, leave it to EyeVision.</p>
 					<?php endif; ?>
 					<?php if ( is_page( 'shop-info-ch' ) ) : ?>
-						<h1 class="l-logo-area__catch u-sp-hidden">如果您要在美国寻找隐形眼镜，请交给EyeVision。</h1>
+						<p class="l-logo-area__catch u-sp-hidden">如果您要在美国寻找隐形眼镜，请交给EyeVision。</p>
 					<?php endif; ?>
 					<div class="l-logo-area__row l-header-inner-lang__logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-logo-area__logo">

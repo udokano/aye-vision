@@ -92,7 +92,7 @@
 	</li>
 	<li class="l-foot-action__item l-foot-reserve">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>reserve?services=3" class="l-foot-action__link l-foot-reserve__link" target="_blank">
-			   <p class="l-foot-reserve__text">Recruit</p>
+			   <p class="l-foot-reserve__text">reserve</p>
 		</a>
 	</li>
 	<li class="l-foot-action__item l-foot-line">
