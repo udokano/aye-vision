@@ -124,39 +124,6 @@
 	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-	<script>
-
-
-		document.addEventListener("DOMContentLoaded", function() {
-			var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-			if ("IntersectionObserver" in window) {
-				let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-				entries.forEach(function(entry) {
-					if (entry.isIntersecting) {
-					let lazyImage = entry.target;
-					lazyImage.src = lazyImage.dataset.src;
-					if (typeof lazyImage.dataset.srcset === "undefined") {
-					}else{
-						lazyImage.srcset = lazyImage.dataset.srcset;
-					}
-					lazyImage.classList.remove("lazy");
-					lazyImageObserver.unobserve(lazyImage);
-					}
-				});
-				});
-
-				lazyImages.forEach(function(lazyImage) {
-				lazyImageObserver.observe(lazyImage);
-				});
-			} else {
-				// Possibly fall back to a more compatible method here
-			}
-		});
-
-
-
-	</script>
 
 </body>
 <?php wp_footer(); ?>

@@ -35,6 +35,9 @@ import autoKana from './lib/autoKana.js';
 
 import vueSlide from './slide/top-slide.js';
 
+
+import lazyLoadAction from './components/IntersectionObserver.js';
+
 import kana from './components/kana.js';
 
 import fontSize from './components/fontSize.js';
