@@ -59,7 +59,12 @@ define( 'DUMMY', 'src=' . PATH . '' );
 		<div class="l-inner l-header__inner">
 
 				<div class="l-header__left l-logo-area">
+				<?php if ( is_home() || is_front_page() ) : ?>
 					<h1 class="l-logo-area__catch u-sp-hidden">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</h1>
+				<?php else : ?>
+					<p class="l-logo-area__catch u-sp-hidden">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</p>
+				<?php endif; ?>
+
 					<div class="l-logo-area__row">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-logo-area__logo">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo.svg" alt="アイ・ビジョン">
