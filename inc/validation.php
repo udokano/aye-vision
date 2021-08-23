@@ -1,4 +1,5 @@
-<script>
+<script defer>
+window.addEventListener( 'load', function(){
 /* お客様情報入力ページ */
 jQuery(function () {
     jQuery("#customer_pref option:first-child").val("");
@@ -34,10 +35,16 @@ jQuery(function () {
 戻るボタン押したらバリデーション無効化する
 -------------*/
 jQuery(".back_cart_button").on("click", function () {
-    jQuery("input").removeClass("validate[required]");
-    jQuery("input").removeClass("validate[required,equals[mailaddress1]]");
-    jQuery("input").removeClass("validate[required,equals[pass01]]");
+    jQuery("input,select").removeClass("validate[required]");
+   jQuery("input").removeClass("validate[required,equals[mailaddress1]]");
+   //  jQuery("input").removeClass("validate[required,equals[pass01]]");
 });
 
+jQuery(".back_to_customer_button").on("click", function () {
+    jQuery("input,select").removeClass("validate[required]");
+   jQuery("input").removeClass("validate[required,equals[mailaddress1]]");
+   //  jQuery("input").removeClass("validate[required,equals[pass01]]");
+});
 
+});
 </script>
