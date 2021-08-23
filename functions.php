@@ -213,6 +213,29 @@ add_filter( 'style_loader_tag', 'load_css_async_top', 10, 4 );
 
 
 /**
+ * JS遅延読み込み、プラグインの処理に影響出る可能性があるからとりあえずTOPページのみに作動
+ */
+
+
+
+/**
+ * scriptLoader
+ * javascriptの遅延defer属性を追加
+ */
+function scriptLoader( $script, $handle, $src ) {
+	if ( is_admin() || !is_home() || !is_front_page()) {
+        $script = sprintf( '<script src="%s"></script>' . "\n", $src );
+		return $script;
+	}
+
+	if ( is_home() || is_front_page() ) {
+		$script = sprintf( '<script src="%s" type="text/javascript" defer=""></script>' . "\n", $src );
+		return $script;
+	}
+}
+add_filter( 'script_loader_tag', 'scriptLoader', 10, 5 );
+
+/**
  *
  * エディタースタイル読み込み
  */
@@ -516,7 +539,7 @@ function query_at_item_search( $query ) {
 		return;
 	}
 	if ( $query->is_search() ) {
-        $query->set( 'post_status', 'publish' );
+		$query->set( 'post_status', 'publish' );
 		$query->set( 'category_name', 'item' );
 		$query->set( 'posts_per_page', -1 );
 		return;
@@ -530,7 +553,7 @@ function query_at_category( $query ) {
 		return;
 	}
 	if ( $query->is_category() ) {
-        $query->set( 'post_status', 'publish' );
+		$query->set( 'post_status', 'publish' );
 		$query->set( 'posts_per_page', -1 );
 		return;
 	}
@@ -1249,13 +1272,9 @@ function remove_menus_user() {
 add_action( 'admin_menu', 'remove_menus_user' );
 
 
-	global $current_user;
-	if ( $current_user->ID == 2 ) {
-function custom_columns( $columns ) {
-
-		// var_dump($columns);
-	//wp_get_current_user();
-// ユーザーIDを指定、該当ユーザーなら以下を適用
+global $current_user;
+if ( $current_user->ID == 2 ) {
+	function custom_columns( $columns ) {
 		unset( $columns['author'] );
 		unset( $columns['tags'] );
 		  unset( $columns['comments'] );
@@ -1263,11 +1282,10 @@ function custom_columns( $columns ) {
 		unset( $columns['details'] );   // SEO keyword
 
 		return $columns;
+	}
+	add_filter( 'manage_posts_columns', 'custom_columns' );
 
 }
-add_filter( 'manage_posts_columns', 'custom_columns' );
-
-	}
 
 add_filter(
 	'contextual_help',
