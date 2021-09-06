@@ -156,7 +156,7 @@
 												<?php endif; ?>
 											</p>
 											<h3 class="p-news__ttl"><?php the_title(); ?></h3>
-											<p class="p-news__desc"><?php echo get_the_excerpt() ; ?></p>
+											<p class="p-news__desc"><?php echo get_the_excerpt(); ?></p>
 										</div>
 									</a>
 								</li>
@@ -308,8 +308,8 @@
 							<div class="top-access__col">
 									<div class="top-access__map map-area">
 										<div class="map-area__illust u-radius-50">
-											<img <?php echo esc_attr( DUMMY ); ?> data-src='<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/top-page/illust_access-map.jpg?5555555' alt='アイ・ビジョン（横山眼科ビル2F）' class='lazy u-sp-hidden'>
-											<img <?php echo esc_attr( DUMMY ); ?> data-src='<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/top-page/illust_access-map_sp.jpg?5555555' alt='アイ・ビジョン（横山眼科ビル2F）' class='lazy u-pc-hidden'>
+											<img <?php echo esc_attr( DUMMY ); ?> data-src='<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/top-page/illust_access-map.jpg?88522632888' alt='アイ・ビジョン（横山眼科ビル2F）' class='lazy u-sp-hidden'>
+											<img <?php echo esc_attr( DUMMY ); ?> data-src='<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/top-page/illust_access-map_sp.jpg?88522632888' alt='アイ・ビジョン（横山眼科ビル2F）' class='lazy u-pc-hidden'>
 										</div>
 										<!-- ./illust -->
 										<ul class="map-area__list">
