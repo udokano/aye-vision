@@ -96,12 +96,12 @@ if ( isset( $_GET['reserve-type'] ) ) {
 															 <?php
 
 
-														if ( usces_the_itemImageURL( 0, 'return' ) ) {
-															echo usces_the_itemImage( 0, 800, 800 );
-														} else {
-															echo '<img src="' . esc_url( get_template_directory_uri() ) . '/dist/images/item/dummy.thumb.jpg" alt="在庫なし" class="no">';
-														}
-														?>
+																if ( usces_the_itemImageURL( 0, 'return' ) ) {
+																	echo usces_the_itemImage( 0, 800, 800 );
+																} else {
+																	echo '<img src="' . esc_url( get_template_directory_uri() ) . '/dist/images/item/dummy.thumb.jpg" alt="在庫なし" class="no">';
+																}
+																?>
 
 														</div>
 														<p class="service-list__name js-select-text"><?php echo wp_strip_all_tags( usces_the_itemName( 'return' ) ); ?></p>
@@ -121,9 +121,9 @@ if ( isset( $_GET['reserve-type'] ) ) {
 
 			<div class="reserve-list">
 
-					<div class="reserve-list__cal js-hidden js-reserve-cal" id="js-reserve-type01">
-						<?php echo do_shortcode( '[booking_package id=4]' ); ?>
-					</div>
+						<div class="reserve-list__cal js-hidden js-reserve-cal" id="js-reserve-type01">
+							<?php echo do_shortcode( '[booking_package id=4]' ); ?>
+						</div>
 
 					<!-- <div class="reserve-list__cal js-hidden js-reserve-cal" id="js-reserve-type02">
 

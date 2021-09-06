@@ -393,7 +393,7 @@ h3 {
 }
 
 .c-modal-buy__btn--ec {
-  background-color: #12a9e9;
+  background-color: #a5a5a5;
 }
 
 .c-modal-buy__btn--coming {
@@ -536,6 +536,7 @@ h3 {
 
 .l-header {
   padding: 16px 0 0;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -1111,8 +1112,8 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  .p-news__item:nth-last-child(2),
-  .p-news__item:last-of-type {
+  .p-news__item:nth-child(4),
+  .p-news__item:nth-child(5) {
     margin-top: 33px;
   }
 }

@@ -86,6 +86,7 @@ define( 'DUMMY', 'src=' . PATH . '' );
 							<div class="l-header-side__table">
 								 <?php get_template_part( 'inc/table-info02' ); ?>
 							</div>
+							<p class="l-header-side__off">定休日／水曜日・祝日・夏期休業・年末年始 その他あり</p>
 						</div>
 
 						<?php if ( ! wp_is_mobile() ) : ?>
@@ -185,9 +186,10 @@ define( 'DUMMY', 'src=' . PATH . '' );
 				<li class="l-global-table__item">
 				 <?php get_template_part( 'inc/table-info01' ); ?>
 				</li>
-				<li class="l-global-table__item">
+				<li class="l-global-table__item u-mb0">
 				 <?php get_template_part( 'inc/table-info02' ); ?>
 				</li>
+				<li class="l-global-table__off">定休日／水曜日・祝日・<br>夏期休業・年末年始 その他あり</li>
 			</ul>
 
 		 </div>

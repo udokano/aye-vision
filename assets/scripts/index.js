@@ -35,7 +35,6 @@ import autoKana from './lib/autoKana.js';
 
 import vueSlide from './slide/top-slide.js';
 
-
 import lazyLoadAction from './components/IntersectionObserver.js';
 
 import kana from './components/kana.js';
@@ -53,7 +52,6 @@ import tab from './components/tab.js';
 import modal from './components/modal.js';
 
 import accordion_qa_vue from './components/accordion-qa.js';
-
 
 /* ページ独自 */
 
