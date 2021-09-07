@@ -1,15 +1,3 @@
-<?php
-
-/**
- * 定数定義
- * ダミー画像のパスとHTMLを定義
- */
-define( 'PATH', esc_url( get_template_directory_uri() ) . '/dist/images/common/c_dummy_thumb.jpg' );
-define( 'DUMMY', 'src=' . PATH . '' );
-
-
-
-?>
 
 
 <!DOCTYPE html>
