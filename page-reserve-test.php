@@ -17,8 +17,9 @@ $min  = $info['minutes'];
 $current_date = $hour;
 
 
-/*現在の日付の曜日の番号を出力する*/
-$date = date( 'w' );
+/*
+現在の日付の曜日の番号を出力する*/
+// $date = date( 'w' );
 
 
 ?>
@@ -141,21 +142,15 @@ if ( isset( $_GET['reserve-type'] ) ) {
 
 			<div class="reserve-list">
 
-
-			現在の時間：<?php echo $current_date; ?>時
-
-			<p class="">9:00~18:59までしか予約フォームが出現しなければ成功</p>
-
-
 			<?php if ( 8 < $current_date && 19 > $current_date ) : ?>
 
 						<div class="reserve-list__cal js-hidden js-reserve-cal" id="js-reserve-type01">
 							<?php echo do_shortcode( '[booking_package id=4]' ); ?>
 						</div>
 
-									<?php else : ?>
+			<?php else : ?>
 
-									<p class=""><br>予約時間外</p>
+									<p class="u-text-center u-text-1_5 u-text-bold">ただいま予約フォームご利用時間外になります。<br>9:00~19:00の間にご利用くださいませ。</p>
 
 			<?php endif; ?>
 

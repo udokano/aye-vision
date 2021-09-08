@@ -4,6 +4,26 @@ Template Name: 来店予約
 */
 ?>
 
+<?php
+
+
+
+date_default_timezone_set( 'Asia/Tokyo' );
+$info = getdate();
+$hour = $info['hours'];
+$min  = $info['minutes'];
+
+$current_date = $hour;
+
+
+/*
+現在の日付の曜日の番号を出力する*/
+// $date = date( 'w' );
+
+
+?>
+
+
 <?php get_header(); ?>
 
 
@@ -121,9 +141,17 @@ if ( isset( $_GET['reserve-type'] ) ) {
 
 			<div class="reserve-list">
 
+			<?php if ( 8 < $current_date && 19 > $current_date ) : ?>
+
 						<div class="reserve-list__cal js-hidden js-reserve-cal" id="js-reserve-type01">
 							<?php echo do_shortcode( '[booking_package id=4]' ); ?>
 						</div>
+
+			<?php else : ?>
+
+									<p class="u-text-center u-text-1_5 u-text-bold">ただいま予約フォームご利用時間外になります。<br>9:00~19:00の間にご利用ください。</p>
+
+			<?php endif; ?>
 
 					<!-- <div class="reserve-list__cal js-hidden js-reserve-cal" id="js-reserve-type02">
 
