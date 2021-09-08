@@ -17,6 +17,10 @@ $min  = $info['minutes'];
 $current_date = $hour;
 
 
+/*現在の日付の曜日の番号を出力する*/
+$date = date( 'w' );
+
+
 ?>
 
 
