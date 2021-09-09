@@ -5,7 +5,7 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-breadcrumb__link">アイ・ビジョンTOP</a>
 		</li>
 		<li class="l-breadcrumb__item">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-breadcrumb__link">ブログ</a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-breadcrumb__link">ブログ</a>
 		</li>
 		<li class="l-breadcrumb__item">
 			<a href="" class="l-breadcrumb__link"><?php the_title(); ?></a>
@@ -37,7 +37,7 @@
 				<!-- ./contents -->
 			</div>
 			<!-- ./col02 -->
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="c-btn p-single__btn">ブログ一覧へ戻る</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="c-btn p-single__btn">ブログ一覧へ戻る</a>
 	</div>
 	<!-- ./inner -->
 

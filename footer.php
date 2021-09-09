@@ -68,7 +68,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">よくある質問</a>
 				</li>
 				<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">ブログ</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-footer-nav__link">ブログ</a>
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">店舗案内</a>

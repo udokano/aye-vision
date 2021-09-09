@@ -58,7 +58,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">FAQ</a>
                 </li>
                 	<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">Blog</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-footer-nav__link">Blog</a>
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">Store Guide</a>
@@ -144,7 +144,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">常见问题</a>
                 </li>
                 <li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">博客</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-footer-nav__link">博客</a>
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">商店指南</a>

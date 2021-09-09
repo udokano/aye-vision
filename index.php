@@ -408,7 +408,7 @@
 												?>
 
 										</ul>
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="c-btn top-blog__btn">もっと見る</a>
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="c-btn top-blog__btn">もっと見る</a>
 							</div>
 							<!-- ./inner -->
 </section>
