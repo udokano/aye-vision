@@ -20,7 +20,7 @@ $(function ($) {
         //activeでないボタンだった場合のみ動作
         if (!$(this).hasClass('is-active')) {
             //現在activeのついているclassを削除
-            $('.is-active').removeClass('is-active');
+            $('.js-font-size-change').removeClass('is-active');
             //クリックしたボタンをactive
             $(this).addClass('is-active');
             //クリックした要素のID名を変数にセット

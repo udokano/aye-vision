@@ -111,6 +111,10 @@
 .news-archive {
     padding: 2.83% 0 0;
 
+    &::after {
+        display: none;
+    }
+
     &__col {
         @include flex-sb;
 

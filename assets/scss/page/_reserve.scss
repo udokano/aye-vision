@@ -166,10 +166,19 @@
 }
 
 .reserve-form {
-    #booking-package_inputFormPanel input[type=text] {
+    #booking-package_inputFormPanel input[type=text], #booking-package_inputFormPanel textarea {
         font-size: rem(18);
         padding: 0.64rem;
         border-width: rem(2);
+    }
+
+    #booking-package_inputFormPanel textarea {
+        height: 170px;
+        overflow-y: scroll;
+
+        @include sp {
+            height: 38vw;
+        }
     }
 
     #booking-package_inputFormPanel select {

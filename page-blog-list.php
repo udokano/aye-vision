@@ -24,7 +24,7 @@ Template Name: ブログ一覧
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-breadcrumb__link">アイ・ビジョンTOP</a>
 		</li>
 		<li class="l-breadcrumb__item">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-breadcrumb__link">ブログ</a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-breadcrumb__link">ブログ</a>
 		</li>
 	</ul>
 </div>

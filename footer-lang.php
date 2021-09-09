@@ -21,7 +21,11 @@
 <footer class="l-footer">
 	<div class="l-inner l-footer__inner l-footer-inner-lang">
 			<div class="l-footer__left l-footer-info  l-footer-inner-lang__left">
-				<p class="u-pc-hidden l-footer-info__sp-heading">If you are looking for contact lenses in Hanabata, Adachi-ku (near Takenotsuka Station), leave it to eye-Vision.</p>
+
+
+                    <p class="u-pc-hidden l-footer-info__sp-heading">If you are looking for contact lenses in Hanabata, Adachi-ku (near Takenotsuka Station), leave it to Eye-Vision.</p>
+
+
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
 				</a>
@@ -54,7 +58,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">FAQ</a>
                 </li>
                 	<li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">Blog</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-footer-nav__link">Blog</a>
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">Store Guide</a>
@@ -88,7 +92,7 @@
 	</li>
 	<li class="l-foot-action__item l-foot-reserve">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>reserve?services=3" class="l-foot-action__link l-foot-reserve__link" target="_blank">
-			   <p class="l-foot-reserve__text">Recruit</p>
+			   <p class="l-foot-reserve__text">reserve</p>
 		</a>
 	</li>
 	<li class="l-foot-action__item l-foot-line">
@@ -103,7 +107,11 @@
 <footer class="l-footer">
 	<div class="l-inner l-footer__inner l-footer-inner-lang">
 			<div class="l-footer__left l-footer-info  l-footer-inner-lang__left">
-				<p class="u-pc-hidden l-footer-info__sp-heading">如果您要在足立区花畑（竹冢站附近）寻找隐形眼镜，请交给eye-Vision。</p>
+
+
+                <p class="u-pc-hidden l-footer-info__sp-heading">如果您要在足立区花畑（竹冢站附近）寻找隐形眼镜，请交给Eye-Vision。</p>
+
+
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
 				</a>
@@ -136,7 +144,7 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">常见问题</a>
                 </li>
                 <li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">博客</a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-footer-nav__link">博客</a>
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">商店指南</a>
@@ -182,7 +190,7 @@
 <?php endif; ?>
 </div>
 <!-- ./l-wrapper -->
-<script>
+<script defer>
   (function(d) {
 	var config = {
 	  kitId: 'tdr0hhf',
@@ -192,122 +200,7 @@
 	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-	<script>
 
-
-		document.addEventListener("DOMContentLoaded", function() {
-			var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-			if ("IntersectionObserver" in window) {
-				let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-				entries.forEach(function(entry) {
-					if (entry.isIntersecting) {
-					let lazyImage = entry.target;
-					lazyImage.src = lazyImage.dataset.src;
-					if (typeof lazyImage.dataset.srcset === "undefined") {
-					}else{
-						lazyImage.srcset = lazyImage.dataset.srcset;
-					}
-					lazyImage.classList.remove("lazy");
-					lazyImageObserver.unobserve(lazyImage);
-					}
-				});
-				});
-
-				lazyImages.forEach(function(lazyImage) {
-				lazyImageObserver.observe(lazyImage);
-				});
-			} else {
-				// Possibly fall back to a more compatible method here
-			}
-        });
-
-
-
-	</script>
 
 </body>
 <?php wp_footer(); ?>
-
-
-
-<script>
-
-	$(function () {
-
-	$(".js-item-ajax").eq(0).addClass('is-active');
-	$(".js-item-ajax").on("click", function () {
-		var currentCat = $(this).attr("data-slug");
-		var btnElm = $("#js-ajax-link-toggle");
-		 //var btnHref = btnElm.attr("href");
-		 //var btnSplit = btnElm.attr("href").split('=');
-		 //var split = btnHref.replace(btnSplit[1],currentCat);
-
-					if("1day" == currentCat) {
-							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item/?item_cat=1day");
-					}
-
-					 if("2week" == currentCat) {
-							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item/?item_cat=2week");
-					}
-
-					 if("care" == currentCat) {
-							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item-normal/?item_cat=care");
-					}
-
-		 //console.log(btnHref);
-		$(".js-item-ajax").removeClass("is-active");
-		  $(this).addClass('is-active');
-		$.ajax({
-			type: "POST",
-			url: "<?php echo esc_url( get_template_directory_uri() ); ?>/inc/ajax-item-loop-top.php",
-			data: {
-				current_cat: currentCat,
-			},
-			success: function (response) {
-				jQuery("#js-item-ajax").html(response);
-				// btnElm.attr("href",split);
-
-				//console.log("成功");
-				console.log(currentCat);
-			}
-		});
-	});
-});
-
-	</script>
-
-	<script>
-
-	$(function () {
-	$(".js-item-ajax-btn").on("click", function () {
-
-		var currentCat = $(this).attr("data-slug");
-
-		var params = (new URL(document.location)).searchParams;
-		var urlCat = params.get('item_cat');
-		$(".js-item-ajax-btn").removeClass("is-active");
-		  $(this).addClass('is-active');
-		$.ajax({
-			type: "POST",
-			url: "<?php echo esc_url( get_template_directory_uri() ); ?>/inc/ajax-item-loop-list.php",
-			data: {
-				current_cat: currentCat,
-				item_cat: urlCat,
-			},
-			success: function (response) {
-				jQuery("#js-item-ajax").html(response);
-
-
-				console.log("成功");
-				console.log(currentCat);
-			}
-		});
-	});
-});
-
-	</script>
-
-	<?php if ( is_single() && in_category( 'item' ) || is_page( 'usces-cart' ) ) : ?>
-		<?php get_template_part( 'inc/validation' ); ?>
-	<?php endif; ?>

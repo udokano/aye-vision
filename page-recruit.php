@@ -148,8 +148,8 @@ Template Name: 採用情報
 				</div>
 				<!-- ./content -->
 			</div>
-            <!-- ./col02 -->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="c-btn job-entry__btn">応募する</a>
+			<!-- ./col02 -->
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>recruit-entry" class="c-btn job-entry__btn">応募する</a>
 	</div>
 	<!-- ./inner -->
  </section>

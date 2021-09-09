@@ -38,7 +38,10 @@ define( 'DUMMY', 'src=' . PATH . '' );
 
 				<div class="l-header__left l-logo-area l-header-inner-lang__left">
 					<?php if ( is_page( 'shop-info-eng' ) ) : ?>
-						<h1 class="l-logo-area__catch u-sp-hidden">If you are looking for contact lenses in the United States, leave it to ayeVision.</h1>
+						<p class="l-logo-area__catch u-sp-hidden">If you are looking for contact lenses in the United States, leave it to EyeVision.</p>
+					<?php endif; ?>
+					<?php if ( is_page( 'shop-info-ch' ) ) : ?>
+						<p class="l-logo-area__catch u-sp-hidden">如果您要在美国寻找隐形眼镜，请交给EyeVision。</p>
 					<?php endif; ?>
 					<div class="l-logo-area__row l-header-inner-lang__logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-logo-area__logo">
@@ -81,8 +84,8 @@ define( 'DUMMY', 'src=' . PATH . '' );
 									<!-- ./list -->
 								</div>
 								<!-- ./area -->
-                            </div>
-                            <!-- ./l-header-font-trans -->
+							</div>
+							<!-- ./l-header-font-trans -->
 							<?php endif; ?>
 						<?php endif; ?>
 
@@ -106,8 +109,8 @@ define( 'DUMMY', 'src=' . PATH . '' );
 								<span class="l-sp-toggle__line"></span>
 							</div>
 						</button>
-                            <?php endif; ?>
-                            	<!-- SP_ONLY -->
+							<?php endif; ?>
+								<!-- SP_ONLY -->
 						   <?php if ( is_page( 'shop-info-eng' ) ) : ?>
 						<button class="u-pc-hidden l-sp-translate js-modal-open" data-target="js-modal-translate">
 							<div class="l-sp-translate__svg">

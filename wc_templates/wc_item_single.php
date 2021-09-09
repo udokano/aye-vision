@@ -32,7 +32,7 @@ get_header();
 
 
 
-							<a href="<?php usces_the_itemImageURL( 0 ); ?>" <?php echo apply_filters( 'usces_itemimg_anchor_rel', null ); ?> target="_blank"><?php usces_the_itemImage( 0, 999, 999, $post ); ?></a>
+							<a href="<?php usces_the_itemImageURL( 0 ); ?>" <?php echo apply_filters( 'usces_itemimg_anchor_rel', null ); ?> target="_blank" class="cart-content__link"><?php usces_the_itemImage( 0, 999, 999, $post ); ?></a>
 
 
 						<?php

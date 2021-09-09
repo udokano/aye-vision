@@ -21,7 +21,12 @@
 <footer class="l-footer">
 	<div class="l-inner l-footer__inner">
 			<div class="l-footer__left l-footer-info">
-				<p class="u-pc-hidden l-footer-info__sp-heading">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</p>
+				<?php if ( is_home() || is_front_page() ) : ?>
+						<h1 class="u-pc-hidden l-footer-info__sp-heading">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</h1>
+				<?php else : ?>
+							<p class="u-pc-hidden l-footer-info__sp-heading">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</p>
+				<?php endif; ?>
+
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-footer-info__logo">
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo_footer.svg" alt="アイ・ビジョン" class="">
 				</a>
@@ -61,17 +66,17 @@
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>faq" class="l-footer-nav__link">よくある質問</a>
-                </li>
-                <li class="l-footer-nav__item">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog" class="l-footer-nav__link">ブログ</a>
+				</li>
+				<li class="l-footer-nav__item">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>blog-list" class="l-footer-nav__link">ブログ</a>
 				</li>
 				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info" class="l-footer-nav__link">店舗案内</a>
-                </li>
-                <li class="l-footer-nav__item">
+				</li>
+				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-eng" class="l-footer-nav__link">店舗案内(英語)</a>
-                </li>
-                <li class="l-footer-nav__item">
+				</li>
+				<li class="l-footer-nav__item">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>shop-info-ch" class="l-footer-nav__link">店舗案内(中国)</a>
 				</li>
 
@@ -109,7 +114,7 @@
 
 </div>
 <!-- ./l-wrapper -->
-<script>
+<script defer>
   (function(d) {
 	var config = {
 	  kitId: 'tdr0hhf',
@@ -119,48 +124,15 @@
 	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-	<script>
-
-
-		document.addEventListener("DOMContentLoaded", function() {
-			var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-			if ("IntersectionObserver" in window) {
-				let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-				entries.forEach(function(entry) {
-					if (entry.isIntersecting) {
-					let lazyImage = entry.target;
-					lazyImage.src = lazyImage.dataset.src;
-					if (typeof lazyImage.dataset.srcset === "undefined") {
-					}else{
-						lazyImage.srcset = lazyImage.dataset.srcset;
-					}
-					lazyImage.classList.remove("lazy");
-					lazyImageObserver.unobserve(lazyImage);
-					}
-				});
-				});
-
-				lazyImages.forEach(function(lazyImage) {
-				lazyImageObserver.observe(lazyImage);
-				});
-			} else {
-				// Possibly fall back to a more compatible method here
-			}
-        });
-
-
-
-	</script>
 
 </body>
 <?php wp_footer(); ?>
 
 
 
-<script>
+<script defer>
 
-	$(function () {
+	window.addEventListener( 'load', function(){
 
 	$(".js-item-ajax").eq(0).addClass('is-active');
 	$(".js-item-ajax").on("click", function () {
@@ -182,7 +154,7 @@
 							btnElm.attr("href","<?php echo esc_url( home_url( '/' ) ); ?>item-normal/?item_cat=care");
 					}
 
-		 //console.log(btnHref);
+
 		$(".js-item-ajax").removeClass("is-active");
 		  $(this).addClass('is-active');
 		$.ajax({
@@ -194,9 +166,6 @@
 			success: function (response) {
 				jQuery("#js-item-ajax").html(response);
 				// btnElm.attr("href",split);
-
-				//console.log("成功");
-				console.log(currentCat);
 			}
 		});
 	});
@@ -204,9 +173,9 @@
 
 	</script>
 
-	<script>
+	<script defer>
 
-	$(function () {
+	 window.addEventListener( 'load', function(){
 	$(".js-item-ajax-btn").on("click", function () {
 
 		var currentCat = $(this).attr("data-slug");
@@ -224,10 +193,6 @@
 			},
 			success: function (response) {
 				jQuery("#js-item-ajax").html(response);
-
-
-				console.log("成功");
-				console.log(currentCat);
 			}
 		});
 	});

@@ -11,7 +11,6 @@ define( 'DUMMY', 'src=' . PATH . '' );
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -59,7 +58,12 @@ define( 'DUMMY', 'src=' . PATH . '' );
 		<div class="l-inner l-header__inner">
 
 				<div class="l-header__left l-logo-area">
+				<?php if ( is_home() || is_front_page() ) : ?>
 					<h1 class="l-logo-area__catch u-sp-hidden">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</h1>
+				<?php else : ?>
+					<p class="l-logo-area__catch u-sp-hidden">足立区花畑(竹ノ塚駅近辺)でコンタクトをお探しならアイ・ビジョンにお任せください。</p>
+				<?php endif; ?>
+
 					<div class="l-logo-area__row">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="l-logo-area__logo">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/images/common/c_logo.svg" alt="アイ・ビジョン">
@@ -81,6 +85,7 @@ define( 'DUMMY', 'src=' . PATH . '' );
 							<div class="l-header-side__table">
 								 <?php get_template_part( 'inc/table-info02' ); ?>
 							</div>
+							<p class="l-header-side__off">定休日／水曜日・祝日・夏期休業・年末年始 その他あり</p>
 						</div>
 
 						<?php if ( ! wp_is_mobile() ) : ?>
@@ -180,9 +185,10 @@ define( 'DUMMY', 'src=' . PATH . '' );
 				<li class="l-global-table__item">
 				 <?php get_template_part( 'inc/table-info01' ); ?>
 				</li>
-				<li class="l-global-table__item">
+				<li class="l-global-table__item u-mb0">
 				 <?php get_template_part( 'inc/table-info02' ); ?>
 				</li>
+				<li class="l-global-table__off">定休日／水曜日・祝日・<br>夏期休業・年末年始 その他あり</li>
 			</ul>
 
 		 </div>

@@ -4,7 +4,7 @@ Template Name: 店舗情報--中国版
 */
 ?>
 
-<?php get_header('lang'); ?>
+<?php get_header( 'lang' ); ?>
 
 <?php if ( is_page( 'shop-info-ch' ) ) : ?>
 
@@ -76,7 +76,7 @@ Template Name: 店舗情報--中国版
 </div>
 <!-- ./store -->
 
-<?php if ( wp_is_mobile() ) : ?>
+	<?php if ( wp_is_mobile() ) : ?>
 		<section class="shop-time-sp">
 			<div class="l-inner">
 				<h2 class="shop-time-sp__ttl">支付时间</h2>
@@ -158,4 +158,4 @@ Template Name: 店舗情報--中国版
 <?php endif; ?>
 
 <?php
-get_footer('lang');
+get_footer( 'lang' );

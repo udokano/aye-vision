@@ -1,8 +1,9 @@
 <?php
 /*
-Template Name: 来店予約
+Template Name: 来店予約--予約フォーム切り替えテスト用
 */
 ?>
+
 
 <?php
 
@@ -149,7 +150,7 @@ if ( isset( $_GET['reserve-type'] ) ) {
 
 			<?php else : ?>
 
-									<p class="u-text-center u-text-1_5 u-text-bold">ただいま予約フォームご利用時間外になります。<br>9:00~19:00の間にご利用ください。</p>
+									<p class="u-text-center u-text-1_5 u-text-bold">ただいま予約フォームご利用時間外になります。<br>9:00~19:00の間にご利用くださいませ。</p>
 
 			<?php endif; ?>
 

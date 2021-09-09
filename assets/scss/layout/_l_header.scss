@@ -103,6 +103,7 @@
     &__left {
         @include flex-sb;
 
+        flex-wrap: wrap;
         width: 85.32%;
 
         //height: rem(125);
@@ -116,6 +117,14 @@
     &__table {
         max-width: 379px;
         width: 48%;
+    }
+
+    &__off {
+        text-align: center;
+        font-size: rem(12);
+        width: 100%;
+        margin-top: rem(7);
+        text-decoration: underline;
     }
 }
 
@@ -374,10 +383,13 @@
 
     &__item {
         margin-bottom: 8.5%;
+    }
 
-        &:last-of-type {
-            margin-bottom: 0;
-        }
+    &__off {
+        margin-top: 5.8%;
+        text-align: center;
+        font-size: 1.22rem;
+        line-height: 1.54;
     }
 }
 

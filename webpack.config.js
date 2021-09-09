@@ -1,6 +1,6 @@
 //path モジュールの読み込み
 const path = require('path');
-
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     // モード値を production に設定すると最適化された状態で、
@@ -52,6 +52,19 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' webpack 1 ç”¨
         }
+    },
+
+    optimization: {
+        minimizer: [
+            new TerserPlugin({
+                extractComments: 'all',
+                terserOptions: {
+                    compress: {
+                        drop_console: true,
+                    },
+                },
+            }),
+        ],
     },
 
 };
